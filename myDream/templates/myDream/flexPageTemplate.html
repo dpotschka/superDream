@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+{% load static %}
+
+
+    <head>
+
+        <title>Your Dream Page</title>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+<meta name="description" content="Now is the time!">
+<meta name="keywords" content="theHyperDream, thehyperdream, the hyperdream, the hyper dream,
+the dream, dream, self help,
+motivate, motivate anyone, love, health, wealth, happiness,
+motivation questions, motivation, ideas, great ideas, guru,
+hope, help others, help all">
+
+<meta name="author" content="David H Potschka">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+
+
+
+
+		</style>
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code  -->
+
+    </head>
+
+	<body>
+
+		<header>
+<!--
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+-->
+
+<a href="http://www.thehyperdream.com/"><img id="logoPic" style="margin-left:20px; margin-top:20px" height="11.11%" width="11.11%" src="/static/myDream/theArt/thd3f.png" /></a>
+
+<br>
+
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+			</nav>
+
+
+
+			<article>
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

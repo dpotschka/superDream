@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+{% load static %}
+
+
+    <head>
+
+        <title>Your Dream Builder</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="{% static 'myDream/builderStyleSheet.css' %}">
+
+<meta name="description" content="Now is the time!">
+<meta name="keywords" content="theHyperDream, thehyperdream, the hyperdream, the hyper dream,
+the dream, dream, self help,
+motivate, motivate anyone, love, health, wealth, happiness,
+motivation questions, motivation, ideas, great ideas, guru,
+hope, help others, help all, Builder, builder">
+
+<meta name="author" content="David H Potschka">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 100px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+
+
+
+
+		</style>
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code  -->
+
+    </head>
+
+	<body>
+
+		<header>
+
+
+
+<!--
+<a href="http://www.thehyperdream.com/"><img class="logo" id="logoPic" style="margin-left:120px; margin-top:20px" height="30%" width="37%" src="/static/myDream/builderImages/wbL7.png" /></a>
+-->
+
+            <video width='100%' height='100%' autoplay loop muted >
+            <source src="/static/myDream/builderImages/star.mp4" type="video/mp4"></source>
+            </video>
+
+
+		</header>
+
+		<div id='main'>
+
+			<nav>
+
+                <div class="builder"> builder<br>
+    of your<br>
+    website<br>
+    you<br>
+    create<br>
+    the idea<br>
+    and we<br>
+    will<br>
+    build it
+    </div>
+
+			</nav>
+
+
+
+			<article>
+
+                <a class='logo' href="http://www.thehyperdream.com/">theHyperDream.com</a>
+
+
+
+            <!-- this one works but it doesn't play unless you right click on the image and
+            then press the show controls and then hit the play button, then it loops
+            YEA NOW IT WORKS, you just had to add the word "muted".
+
+            See here for help on this video stuff, you will need a fall back image for apple devices.
+https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5
+
+This also works but is slower.
+<source src="{% static 'myDream/builderImages/star.mp4' %}" type="video/mp4"></source>
+            -->
+
+
+
+
+<!--
+
+            <script type="text/javascript">
+
+            window.addEventListener('load', function(){
+                var newVideo = document.getElementById('videoElementId');
+                newVideo.addEventListener('ended', function() {
+                    this.currentTime = 0;
+                    this.play();
+            }, false);
+
+            newVideo.play();
+            });
+
+            </script>
+
+-->
+
+<!--
+See here for help on this video stuff, you will need a fall back image for apple devices.
+https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5
+-->
+
+
+
+			</article>
+
+
+
+			<aside>
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a class="greyBut" href="http://www.thehyperdream.com/"><img id="grey" height="100%" width="100%" src="/static/myDream/webImages/buttons/daveBuilder/greyBut1.png" onmouseover="getid(this);" /></a>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+{% load static %}
+
+
+    <head>
+
+		<title>Your Dream Stock Market Portfolio</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <meta name="description" content="Stock Market Solution and builder of your website!">
+    <meta name="keywords" content="the hyper Dream, theHyperDream.com, stock market solution, website designer,
+    Stock Market Solution, builder of your website, dream, motivate, love, faith, hope, health, wealth,
+    happiness, ideas, great ideas">
+
+    <meta name="author" content="David H Potschka">
+
+    <meta property="og:title" content="Your Dream Stock Market Portfolio"/>
+    <meta property="og:description" content="Stock Market Solution and builder of your website!" />
+    <meta property="og:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta property="og:url" content="https://www.thehyperdream.com/myDream/stockMarketPortfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="243074516150509" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Your Dream Stock Market Portfolio" />
+    <meta name="twitter:description" content="Stock Market Solution and builder of your website!" />
+    <meta name="twitter:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta name="twitter:url" content="https://www.thehyperdream.com/myDream/stockMarketPortfolio/" />
+
+    <link rel="shortcut icon" href="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/static/myDream/webImages/LogoF240x240.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-width:99%;
+}
+
+img {position:relative;}
+p {position:relative;
+    background: rgba(76, 175, 80, 0.90);
+}
+
+
+		</style>
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code  -->
+
+    </head>
+
+	<body>
+
+
+<video autoplay muted loop id="myVideo" poster="/static/myDream/builderImages/water-0.png">
+  <source src="/static/myDream/builderImages/waterNew.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+		<header>
+<!--
+
+ackground-color:#dbdae2;
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+-->
+
+<!--
+<a href="http://www.thehyperdream.com/"><img id="logoPic" style="margin-left:20px; margin-top:20px" height="11.11%" width="11.11%" src="/static/myDream/theArt/thd3f.png" /></a>
+-->
+
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+
+<h3>
+
+<!--
+<a href='https://thehyperdream.webflow.io/thegoods#team'><img id="logoPic" style="margin-left:20px; margin-top:20px" height="49px" width="49px" src="/static/myDream/webImages/LogoF240x240.png" /></a>
+-->
+
+<a href='https://www.thehyperdream.com'><img id="logoPic" style="margin-left:20px; margin-top:20px" height="49px" width="49px" src="/static/myDream/webImages/LogoF240x240.png" /></a>
+
+<!--
+<a href="https://thehyperdream.webflow.io/"><img id="builder" height="25px" width="141px" src="/static/myDream/webImages/buttons/builder1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a href="https://www.thehyperdream.com"><img id="thd" height="25px" width="141px" src="/static/myDream/webImages/buttons/thd1.png" onmouseover="getid(this);" /></a>
+
+<a href="https://www.thehyperdream.com/myDream/guitarVideos/"><img id="guitarVideos" height="25px" width="141px" src="/static/myDream/webImages/buttons/guitarVideos/dgv1.png" onmouseover="getid(this);" /></a>
+<a href="https://www.thehyperdream.com/myDream/artForSale/"><img id="artForSale" height="25px" width="141px" src="/static/myDream/webImages/buttons/artForSale/artForSale1.png" onmouseover="getid(this);" /></a>
+<a href="https://www.thehyperdream.com/myDream/books/"><img id="books" height="25px" width="141px" src="/static/myDream/webImages/buttons/books/books1.png" onmouseover="getid(this);" /></a>
+
+<!--
+<a href="http://www.whatdoesthefroggot.appspot.com/"><img id="theFrog" height="25px" width="141px" src="/static/myDream/webImages/buttons/theFrog/theFrog1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a href="https://www.thehyperdream.com/myDream/contact/"><img id="contact" height="25px" width="141px" src="/static/myDream/webImages/buttons/contact/contact1.png" onmouseover="getid(this);" /></a>
+</h3>
+
+<br>
+
+    <p style='font-size:14px; padding:5%; max-width:45%; margin-left:3%'>
+
+My Stock Market Portfolio by David H Potschka
+<br>
+<br>
+UPDATED:  Dec11/20 Friday
+
+<br><br>
+I started this portfolio the day the market decided to turn into a raging bear, Oct 3/18.
+<br>
+Now we have a raging virus.  Very interesting...
+<br>
+The portfolio is currently up about 2.93%.
+
+The spx (the market) is up about 24.61% (from the date that I started trading Oct 3, 2018).
+
+The portfolio started with $1 millon.  The current value is $1,029,385.
+<br>
+<br>
+Download the screen shots of the actual trades made on the Toronto Dominion Banks
+
+trading platform "Think or Swim"!  This is a paper money simulated trading account.
+<br>
+<a href="https://www.thehyperdream.com/myDream/sendTrades/">screenShotsOfTradesMade1</a>
+<br>
+<a href="https://www.thehyperdream.com/myDream/sendTrades2/">screenShotsOfTradesMade2</a>
+<br>
+<br>
+Investors required. Click <a href="http://www.thehyperdream.com/myDream/contact/"><img id="contact2" height="25px" width="141px" src="/static/myDream/webImages/buttons/contact/contact1.png" onmouseover="getid(this);" /></a>, NOW is the time, the time is NOW!
+
+I'm starting a hedge fund!  Who's in!
+<br>
+
+<br>
+Download a copy of my book<a href="https://www.thehyperdream.com/myDream/sendStockMarketBook/"> "Stock Market Solution"</a> for free!
+
+</p>
+
+
+<!--
+<p style='font-size:1em; padding:5%; max-width:45%; margin-left:3%'>
+
+dvd/s and games FOR SALE!
+<br>
+<br>
+And I have a whole bunch of DVDs, PlayStation2 and xbox etc games for sale.
+<br>
+Download the complete list!
+<br>
+<a href="http://www.thehyperdream.com/myDream/davesList/"> davesList</a>
+
+</p>
+-->
+
+
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+			</nav>
+
+
+
+			<article>
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+
+		</footer>
+
+
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

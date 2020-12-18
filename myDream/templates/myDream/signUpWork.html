@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+    <head>
+
+		<title>Your Web Page</title>
+
+
+
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+
+
+
+
+		</style>
+
+
+    </head>
+
+	<body>
+
+		<header>
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+			</nav>
+
+
+
+
+			<article>
+
+
+Welcom davee to the signup page $1,600,000 to start my happy family!!!
+<br>
+
+
+<!--
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'myPolls:vote' question.id %}" method="post">
+-->
+<form action="{% url 'myFrog:signPost'%}" method="post">
+<!-- Cross Site Request Forgeries.  Stops hackers, from django.  Lesson 4 -->
+{% csrf_token %}
+
+
+<!--
+loop through your user db.
+{% for choice in question.choice_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+{% endfor %}
+-->
+
+<input type="submit" value="Vote" />
+
+</form>
+<br>
+
+
+<p style="color:blue;margin-left:30px;">Problems getting pregnant?  Over 137,000 people succeeded using this <br>
+natural interactive program, FREE information!
+</p>
+
+
+<span style="margin-left:30px;">
+<a href="http://f8392gwmtaj6cu0jx9jkbbuz2n.hop.clickbank.net/" target="_blank"><img src="{% static '/myDream/adImages/baby.jpg' %}"></a>
+</span>
+
+
+<br><br>
+
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

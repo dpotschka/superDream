@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+{% load static %}
+
+
+    <head>
+
+		<title>Your Dream Guitar</title>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <meta name="description" content="Stock Market Solution and builder of your website!">
+    <meta name="keywords" content="the hyper Dream, theHyperDream.com, stock market solution,
+    Stock Market Solution, builder of your website, dream, motivate, love, faith, hope, health, wealth,
+    happiness, ideas, great ideas">
+
+    <meta name="author" content="David H Potschka">
+
+    <meta property="og:title" content="Your Dream Guitar"/>
+    <meta property="og:description" content="Stock Market Solution and builder of your website!" />
+    <meta property="og:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta property="og:url" content="https://www.thehyperdream.com/myDream/guitarVideos/" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="243074516150509" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Your Dream Guitar" />
+    <meta name="twitter:description" content="Stock Market Solution and builder of your website!" />
+    <meta name="twitter:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta name="twitter:url" content="https://www.thehyperdream.com/myDream/guitarVideos/" />
+
+    <link rel="shortcut icon" href="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/static/myDream/webImages/LogoF240x240.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+            body {
+                    background-image: url("/static/myDream/webImages/asses.jpg");
+                     background-repeat: no-repeat;
+                      background-size: 100% 100%;
+                 }
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-width:99%;
+}
+
+img {position:relative;}
+
+iframe {position:relative;}
+
+		</style>
+
+
+    </head>
+
+	<body>
+
+
+<video autoplay muted loop id="myVideo" poster="/static/myDream/builderImages/smoke-0.png">
+  <source src="/static/myDream/builderImages/smokeNew.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+		<header>
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+
+<h3>
+
+<!--
+<a href='https://thehyperdream.webflow.io/thegoods#team'><img id="logoPic" style="margin-left:20px; margin-top:20px" height="49px" width="49px" src="/static/myDream/webImages/LogoF240x240.png" /></a>
+-->
+
+<a href='https://www.thehyperdream.com'><img id="logoPic" style="margin-left:20px; margin-top:20px" height="49px" width="49px" src="/static/myDream/webImages/LogoF240x240.png" /></a>
+
+<!--
+<a href="https://thehyperdream.webflow.io/"><img id="builder" height="25px" width="141px" src="/static/myDream/webImages/buttons/builder1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a href="https://www.thehyperdream.com"><img id="thd" height="25px" width="141px" src="/static/myDream/webImages/buttons/thd1.png" onmouseover="getid(this);" /></a>
+
+<a href="https://www.thehyperdream.com/myDream/artForSale/"><img id="artForSale" height="25px" width="141px" src="/static/myDream/webImages/buttons/artForSale/artForSale1.png" onmouseover="getid(this);" /></a>
+<a href="https://www.thehyperdream.com/myDream/books/"><img id="books" height="25px" width="141px" src="/static/myDream/webImages/buttons/books/books1.png" onmouseover="getid(this);" /></a>
+<a href="https://www.thehyperdream.com/myDream/stockMarketPortfolio/"><img id="stocks" height="25px" width="141px" src="/static/myDream/webImages/buttons/stocks/stocks1.png" onmouseover="getid(this);" /></a>
+
+<!--
+<a href="http://www.whatdoesthefroggot.appspot.com/"><img id="theFrog" height="25px" width="141px" src="/static/myDream/webImages/buttons/theFrog/theFrog1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a href="https://www.thehyperdream.com/myDream/contact/"><img id="contact" height="25px" width="141px" src="/static/myDream/webImages/buttons/contact/contact1.png" onmouseover="getid(this);" /></a>
+</h3>
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+
+			</nav>
+
+
+
+			<article>
+
+
+<!-- Jimi Hendrix solo - Little Wing -->
+
+<h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/U5Vki76x-EU?rel=0" frameborder="0" allowfullscreen></iframe>
+</h1>
+
+<h1 style="color:red; position:relative;">And Now, Some Crazy Guitar Solos by Dave</h1>
+<h2 style="color:red; position:relative;">These vids are large in memory and may not load on some devices.</h2>
+
+
+
+                               <h1 style="color:red; position:relative;">2019</h1>
+
+<h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/TWQ44AsqxNc?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+       <br>
+
+
+
+                               <h1 style="color:red; position:relative;">2018</h1>
+<!-- leave these first to vids on top, they are great! 22-22-33 and 19-01-08 -->
+
+       <h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/AfqV6HRmbdo?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+       <br>
+
+
+       <h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/6IFGvUh7F7Y?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+       <br>
+
+<!-- start adding here Dave -->
+
+
+
+       <h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/TZMJPnWtJYo?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+       <br>
+
+
+
+       <h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/O7Qv_jXfg8o?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+       <br>
+
+
+       <h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/wTLTzV_6qvk?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+       <br>
+
+
+<!-- coolDaveMellow -->
+
+                                  <h1 style='color:red; position:relative;'>2016</h1>
+
+
+
+       <h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/6ForAw7GBF0?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+       <br>
+
+<!-- coolDave -->
+
+       <h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/XBksNzIIAtQ?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+	   <br>
+
+<!-- hot -->
+
+       <h1>
+	   <iframe width="360px" height="203px" src="https://www.youtube.com/embed/HX75vVUYxaY?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </h1>
+        <br>
+
+
+<!-- whatEver -->
+        <h1>
+        <iframe width="360px" height="203px" src="https://www.youtube.com/embed/Vul6fyGURss" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+<!-- what -->
+        <h1>
+        <iframe width="360px" height="203px" src="https://www.youtube.com/embed/5ENtIrMrmUM" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+<!-- took -->
+        <h1>
+        <iframe width="360px" height="203px" src="https://www.youtube.com/embed/_KUtyjhXhWI" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+
+<!-- noHat -->
+        <h1>
+        <iframe width="360px" height="203px" src="https://www.youtube.com/embed/UtCu76-FP7k" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+<!-- DragonM -->
+        <h1>
+            <iframe width="360px" height="203px" src="https://www.youtube.com/embed/caIT7983xZg" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+<!-- brokensunglasses -->
+        <h1>
+            <iframe width="360px" height="203px" src="https://www.youtube.com/embed/OhtguCJDsvk" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+<!-- blackHat -->
+        <h1>
+            <iframe width="360px" height="203px" src="https://www.youtube.com/embed/tuyWaIQJY_Q" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+<!-- dragonA -->
+        <h1>
+            <iframe width="360px" height="203px" src="https://www.youtube.com/embed/qNfYopnAZ6M" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+<!-- hard -->
+        <h1>
+            <iframe width="360px" height="203px" src="https://www.youtube.com/embed/503t9UkXj8Y" frameborder="0" allowfullscreen></iframe>
+        </h1>
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>   <!--   End main div -->
+
+
+		<footer>
+
+
+		</footer>
+
+
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

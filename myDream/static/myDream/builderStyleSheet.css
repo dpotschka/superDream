@@ -1,0 +1,472 @@
+
+/* c:/Daves_Python_Programs/wiki/whatdoesthefroggot/stylesheets_L/wiki_StyleSheet.css */
+
+{% load static %}
+
+
+			/* See this link for help with flex;
+		    http://www.w3.org/TR/2014/WD-css-flexbox-1-20140325/#layout-algorithm and
+			http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+			*/
+
+
+
+			@mixin flexbox() {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			}
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 24em; flex:1; }
+			#main > nav     { order: 1; width: 274px; }
+			#main > aside   { order: 3; width: 274px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+
+			@media all and (max-width: 700px) {      /* if the screen is greater than 800 px it won't do this document order stuff */
+
+				/* Too narrow to support three columns */
+				#main { flex-flow: column; }
+
+				#main > article, #main > nav, #main > aside {
+					/* Return them to document order */
+					order: 0; width: auto;
+				}
+			}
+
+			/* menu items use flex layout so that visibility:collapse will work. COLLAPSE DOES NOT WORK
+			nav > ul > li {
+				display: flex;
+				flex-flow: column;
+			}
+			 dynamically collapse submenus when not targetted.  This does not collapse anythng, it just hides the text.
+				nav > ul > li:not(:target):not(:hover) > ul {
+				visibility: collapse;
+			}
+
+			*/
+
+
+/* The box-sizing property allows us to include the padding and border in an element's total width and height.
+This keeps all of your divs more or less the same size.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* For styling my href
+a.one:link {color:#ff0000;}
+*/
+
+/*
+If position: absolute; or position: fixed; - the top property sets the top edge of an
+element to a unit above/below the top edge of its nearest positioned ancestor.
+If position: relative; - the top property makes the element's top edge to move above/below its normal position.
+If position: sticky; - the top property behaves like its position is relative when the
+element is inside the viewport, and like its position is fixed when it is outside.
+If position: static; - the top property has no effect.
+*/
+
+
+
+
+
+
+/*  you cannot access a video from an external css sheet
+.myVid {
+    width='100%';
+    height='100%';
+}
+*/
+
+/*
+
+div.a {
+  border:3px solid red;
+  position: absolute;
+  top: 0;
+  margin-left:30px;
+  margin-top:60px;
+ }
+
+*/
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 0px 0px 0px;
+  color:white;
+  margin-left:12%;
+  margin-top:7%;
+  text-decoration: none;
+  font-size: 260%;
+}
+
+
+.builder {
+  position: fixed;
+  top:0;
+  left:0;
+  padding: 0px 0px 0px 0px;
+  color:white;
+  margin:13% 0px 0px 2%;
+  font-size:140;
+  z-index:2;
+}
+
+.greyBut {
+  position: fixed;
+  top:0;
+  right:0;
+  padding: 0px 0px 0px 0px;
+  margin:8.5% 2% 0% 90%;
+}
+
+
+ /* font-size:1.1vw; each point is 10% of the viewport width */
+
+
+
+            /*
+			body {
+			    background-image: url("/static/myDream/webImages/asses.jpg");
+                     background-repeat: no-repeat;
+                      background-size: 100% 100%;
+				margin:0;
+				padding:0;
+			}
+
+            */
+
+/*
+            header {
+                background-image: url("/static/myDream/builderImages/headerBGF.png");
+                     background-repeat: no-repeat;
+                      background-size: 100% 100%;
+				margin:0;
+				padding:0;
+            }
+
+*/
+
+
+            h1 {font-size:2.5em;        /* 1 em = 16 px.  You do your fonts in em so they will scale with different browers and window sizes. */
+			   text-align:center;}
+			h1.sans-serif{font-family:Arial, Helvetica, sans-serif;}      /* If sans-serif is not available then Helvetica  etc or is it the other way around */
+
+			h2 {font-size:1.875em;
+			   margin-left:20px;}
+			h3 {text-align:center; margin:0 auto}
+			h4 {text-align:center; margin:0 auto}
+			h5 {text-align:center; margin:0 auto}
+			h6 {text-align:center;}
+
+
+			p {width:75%; font-size:1.25em}
+			p.Verdana{font-family:"Times New Roman",Verdana, "Lucida Console";}  /* If Lucida console is not available then Verdana */
+
+		    ol {font-size:1.5em;}
+
+
+
+		/*    body{   */
+			   /* background-image: url(/Images/BlogBackG.png);    The first image will cover the second image. */
+			   /* background-repeat:no-repeat;  */
+		       /* background-size:100% 100%;  */
+				/* background-attachment:fixed;  */  /* Your image will be the same every where ie it will scroll with the window. */
+               /* margin: 0;  */                  /* You need margin and padding for browser stability  */
+               /* padding: 0;  */
+				/*font-size:100%;  */  /* This will snyc with your em above */
+
+          /*  }	*/
+
+
+			.floatL	{
+				float:left;
+			/*	width:264px;            264 x 62 this is my button size.
+				height:62px;
+				margin:15px;
+				padding:5px;   */
+			}
+
+			.floatR	{
+				float:right;
+			/*	width:265px;             264 x 62 this is my button size.
+				height:63px;
+				margin:15px;
+				padding:5px;  */
+			}
+
+			#clear {            /* This is so text won't float around images that are floating. */
+				clear: both;       /* clear left and right float */
+			}
+
+
+			.pos_fixed {           /* Stuff will scroll with the window. */
+				position: fixed;
+				top: 30px;
+				left: 5px;
+     		}
+
+
+			/*
+			    To center stuff...
+			    "display:inline-block" on the IMG.  Then "text-align:center" for the nested container div.
+			    See the notes which follow.
+			*/
+			.inlineBlock {          /* Make your images inline blocks.  You cannot pad or margin inline elements. */
+			    display:inline;   /*display:inline-block;*/
+				margin:auto;
+			}
+
+			.centerImgDiv {      /* This div will be inside another div.  It will contain your images. */
+			    margin-left: auto;
+				margin-right: auto;
+				width: 99%;     /* This div will be nested inside another div so you want it to take up most of the containing div's space. */
+			    text-align:center;	/* This will align your images as they are of class inlineBlock , see above. */
+			}
+
+			.centerImg {
+			    display:block;    /* To center an image first make it a block, for one image use display:block */
+				margin-left: auto; /* For multiple images see above, class centerImgDiv and class inlineBlock, they work together,  */
+				margin-right: auto;  /* and you must nest the centerImgDiv inside  a div of class center, see below, for multiple images */
+				width:48%;       /* My black background is 50% of the window width. */
+			}                    /* For just one super large image just use this in the body with no div. */
+
+			.center {              /* To center a div. in your window. */
+				margin-left: auto;
+				margin-right: auto;
+				width: 48%;                /* If width is 100% this won't center.  This is 48% of the entire window as my black background is about 50% and fixed. */
+				color:blue; padding:20px;   /* The color of your text will be white and everything is 20px away from the margin.
+                                           /* The order is content, padding, border, margin.				*/
+            }
+
+			.centerWider{              /* Same as '.center' above but wider. */
+				margin-left: auto;
+				margin-right: auto;
+				width: 88%;
+				color:blue; padding:20px;
+            }
+
+
+			.outerDivVert  {            /* This container will vertically align whatever is inside it.  Won't do a table since a table */
+			    min-height: 12em;      /* has a display of table-cell already  I think.  */
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.centerBlue {      /* This div will be inside another div.  It will contain your images. */
+			    background-color: #a5ffbc;
+				margin-top: auto;
+				margin-bottom: auto;
+			    margin-left: auto;
+				margin-right: auto;
+				width: 99%;     /* This div will be nested inside another div so you want it to take up most of the containing div's space. */
+				height: 99%;
+			    text-align:center;	/* This will align your images as they are of class inlineBlock , see above. */
+			}
+
+			.tableStuff {
+			    margin-left:auto;
+				margin-right:auto;
+				width:99%;
+			}
+
+			/* Most browser will default pre with this;
+					pre {
+						display: block;
+						font-family: monospace;
+						white-space: pre;
+						margin: 1em 0;
+					}
+
+				white-space: pre; = Whitespace is preserved by the browser. Text will only wrap on line breaks. Acts like the <pre> tag in HTML
+				Why would w3schools.com put this in there.
+		    */
+
+			pre {
+				display: inline-block;
+				font-family: sans-serif;
+				margin: auto;
+			}
+
+			.centerText{text-align:center;}
+
+
+
+			article {
+			    margin:30px;
+			}
+		/*
+		    margin notes.
+
+			margin: 25px 50px 75px 100px;
+			top margin is 25px
+			right margin is 50px
+			bottom margin is 75px
+			left margin is 100px
+
+			margin: 25px 50px 75px;
+			top margin is 25px
+			right and left margins are 50px
+			bottom margin is 75px
+
+			margin: 25px 50px;
+			top and bottom margins are 25px
+			right and left margins are 50px
+
+			margin: 25px;
+			all four margins are 25px
+		*/
+
+		/*   Nice colors for links.
+			a:link    {color:#8dff6d; background-color:transparent}
+			a:visited {color:#3f4fff; background-color:transparent}
+			a:hover   {color:#ff0000; background-color:transparent}
+			a:active  {color:#ffe81e; background-color:transparent}
+        */
+
+			img.top {
+				vertical-align: text-top;
+			}
+
+			img.bottom {
+					vertical-align: text-bottom;
+			}
+
+/*
+	Maintaining your aspect ratio for images.
+
+	background-size: contain; Scale the image, while preserving its intrinsic aspect ratio (if any), to the largest size such
+	that both its width and its height can fit inside the background positioning area.
+	Contain always fits the entire image within your viewport, leaving opaque borders on either the top-bottom or the
+	left-right whenever the ratio of the background image and browser window are not the same.
+
+	document.getElementById("myDIV").style.backgroundSize = "contain";
+
+	background-size: cover; Scale the image, while preserving its intrinsic aspect ratio (if any), to the smallest size
+	such that both its width and its height can completely cover the background positioning area.
+	Cover always fills the browser window, cutting off some hair or ears in the process, which is what I
+	personally prefer for most cases. You can control how your image is aligned within the viewport by using the
+	background-position property.
+
+*/
+
+
+		/* floatieDn/floatieUp/clicker are my scroll buttons div id  */
+
+#clicker {
+	position: fixed;
+	bottom: 7px;
+	right: 61px;
+	background-color: #FFFF00;
+	width: 26px;
+	height: 50px;
+	border: 2px #FF9900 solid;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 4px;
+	transition: transform .2s cubic-bezier(.59,-0.54,.72,1.59);
+	transform: translate(0px, 10px);
+	box-shadow: 0 0 10px 0 #666;
+}
+
+#clicker:hover {
+	background-color: #CCFF33;
+	border-color: #669900;
+	cursor: pointer;
+	transform: translate(0px, 4px);
+}
+
+/*
+#floatie {
+	position: fixed;
+	bottom: 7px;
+	right: 65px;
+	background-color: #FFFF00;
+	width: 26px;
+	height: 50px;
+	border: 2px #FF9900 solid;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 4px;
+	transition: transform .2s cubic-bezier(.59,-0.54,.72,1.59);
+	transform: translate(0px, 10px);
+	box-shadow: 0 0 10px 0 #666;
+}
+
+#floatie:hover {
+	background-color: #CCFF33;
+	border-color: #669900;
+	cursor: pointer;
+	transform: translate(0px, 4px);
+}
+
+
+#floatieUp {
+	position: fixed;
+	bottom: 7px;
+	right: 33px;
+	background-color: #FFFF00;
+	width: 26px;
+	height: 50px;
+	border: 2px #FF9900 solid;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 4px;
+	transition: transform .2s cubic-bezier(.59,-0.54,.72,1.59);
+	transform: translate(0px, 10px);
+	box-shadow: 0 0 10px 0 #666;
+}
+
+#floatieUp:hover {
+	background-color: #CCFF33;
+	border-color: #669900;
+	cursor: pointer;
+	transform: translate(0px, 4px);
+}
+
+#floatieDn {
+	position: fixed;
+	bottom: 7px;
+	right: 5px;
+	background-color: #FFFF00;
+	width: 26px;
+	height: 50px;
+	border: 2px #FF9900 solid;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 4px;
+	transition: transform .2s cubic-bezier(.59,-0.54,.72,1.59);
+	transform: translate(0px, 10px);
+	box-shadow: 0 0 10px 0 #666;
+}
+#floatieDn:hover {
+	background-color: #CCFF33;
+	border-color: #669900;
+	cursor: pointer;
+	transform: translate(0px, 4px);
+}
+
+*/

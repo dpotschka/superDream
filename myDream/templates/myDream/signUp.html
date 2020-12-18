@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+    <head>
+
+		<title>Sign Up</title>
+
+
+<meta name="description" content="Now is the time!">
+<meta name="keywords" content="thd, THD, theHyperDream, thehyperdream, the hyperdream, the hyper dream,
+the dream, dream, self help, help me, dream boy, dream girl,
+motivate, motivate anyone, love, health, wealth, happiness,
+subliminal questions, motivation questions, motivation, ideas, great ideas, guru,
+hope, get off drugs, get my teenager off drugs, subliminal intervention, subliminal, intervention, quit drugs, help others, help all,
+help ">
+<meta name="author" content="David H Potschka">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+            body {
+                    background-image: url("/static/myDream/webImages/asses.jpg");
+                     background-repeat: no-repeat;
+                      background-size: 100% 100%;
+                 }
+
+
+
+		</style>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+    </head>
+
+	<body>
+
+		<header>
+
+<!--
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+<br><br>
+-->
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+			</nav>
+
+
+
+
+			<article>
+
+
+Welcome to the signup page!
+<br>
+Please enter your email address and your name.
+<br>
+We will send you a verification email and a password
+<br>
+so you can continue onto the site.
+<br><br><br>
+
+Cheers, <br><br>
+
+Dave <br><br><br>
+
+
+<!--
+1.  Do you need to motivate someone?  <br><br>
+
+2.  Do you want to learn a set of questions and answers  <br>
+that result in a successful subliminal intervention?  <br><br>
+
+3.  Do you have employees, clients, friends, strangers or family members <br>
+who need to be put on the correct energized path?  <br><br>
+
+4.  Do you need to get yourself re-engaged with that zest for life?<br><br>
+
+If you answered yes to any of the above questions <br>
+then you need to read the book: <br>
+"Get My Teenager Off Drugs" <br><br>
+
+Get immediate access to the book by entering your name and email below!  <br><br>
+
+No credit card required.<br><br>
+-->
+
+
+<form action="{% url 'myDream:signPost'%}" method="post">
+
+<!-- Cross Site Request Forgeries.  Stops hackers, from django.  Lesson 4 -->
+    {% csrf_token %}
+
+<!-- The form is filled in automatically by forms.py, class
+UserInfoForm -->
+
+    <table>
+    {{ form.as_table }}
+    </table>
+    <br><br>
+
+    <input type="submit" value="Thank You">
+</form>
+
+<span style="color:red;margin-left:39px;">{{nameTakenMessage}}</span>
+
+<img src="{% static '/myDream/webImages/roseN.jpg' %}" width='894' height='470'><br>
+<img src="{% static '/myDream/webImages/greenLifeN.jpg' %}" width='70%' height='70%' >
+
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+<!--
+
+ERROR: DJANGO WILL actually try to load the loaders in these comments
+and they will cause errors.  So I have removed the first '%' from
+each loader.
+
+NOTES AND OTHER WAYS TO DO FORMS...
+
+You can generate a form from a generic class SignUpView
+but it's generally better to generate it from a class
+UserInfoForm (my name) at forms.py see above.
+
+<form action="{ url 'myFrog:signPost'%}" method="post">
+    { csrf_token %}
+
+The HTML Label Element ( <label> ) represents a caption for an
+item in a user interface. It can be associated with a control
+either by placing the control element inside the <label>
+element, or by using the for attribute. Such a control is
+called the labeled control of the label element.Jun 27, 2016
+
+for my UserInfoForm class...
+
+Note that each form field has an ID attribute set to id_<nickname>,
+which is referenced by the accompanying label tag. This is important
+in ensuring that forms are accessible to assistive technology such
+as screen reader software.
+
+    {{ form }}
+    <label for="nickname">Your Nickname:</label>
+    <input id="nickname" type="text" name="userName" value="{{ userName }}" maxlength="100" required>
+    <input type="submit" value="Sign Up Super Super Cool">
+
+</form>
+-->
+
+
+
+
+<!--
+{ if error_message %}<p><strong>{{ error_message }}</strong></p>{ endif %}
+-->
+
+<!--
+{{ error_message }}
+{{ comment }}
+{{ userNameCool }}
+
+<form action="{ url 'myFrog:signPost'%}" method="post">
+
+<table>
+
+	<tr>
+		<td class="label">
+			<span style='background:white;'>UserName</span>
+		</td>
+
+		<td>
+			<input type="text" name="userName" value={{userName}}>
+		</td>
+
+		<td class="error">
+
+			{{userError | safe}}
+		</td>
+
+	</tr>
+
+</table>
+
+<input type="submit" value="Sign Up Super Super Cool!" />
+
+</form>
+-->
+
+</html>

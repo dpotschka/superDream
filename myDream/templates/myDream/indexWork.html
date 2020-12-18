@@ -1,0 +1,165 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<a href="{% url 'myFrog:signPost' %}">Sign Up</a>
+
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+<!--<a href="{% url 'myFrog:LogOn' %}">Log On</a>-->
+
+    <head>
+
+		<title>Your Web Page</title>
+
+
+
+		<link rel="stylesheet" type="text/css" href="/stylesheets_L/wiki_StyleSheet.css">
+
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+
+
+
+
+		</style>
+
+
+    </head>
+
+	<body>
+
+		<header>
+
+
+        <h1>
+
+<!--
+<img src='https://www.pythonanywhere.com/user/timetable/files/home/timetable/superFrog/myFrog/static/myFrog/webImages/theFrog5F.png' width='30%' height='30%'>
+                |              -->
+<img src="{% static '/myFrog/webImages/theFrog5F.png' %}" width='30%' height='30%' >
+
+
+        </h1>
+
+<br>
+
+
+This is so much fun and Davee is Super hyper Aware!  Yea, and I'm going to
+earn $1,600,000 in 7 months.
+<br><br>
+Log On or Sign Up to access this web site and the understanding book “Get My Teenager Off Drugs”, you can also create your own webpage in less than 5 seconds.
+
+To sign up just create a user name and enter your email address.  We will send you a verification email and your password.  Once you click on the link in the verification email, you will be able to log in with your user name and password.
+
+We will not share your email address with anyone.
+You can change your password at anytime.
+
+
+
+		</header>
+
+<hr>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+<!--  The blue mark appears because the image tag and its surrounding anchor tags have been placed
+on separate lines! If you place them on one line, the mark will not be displayed.  Also delete extra white space.
+-->
+
+
+<!--
+<a title= 'Login Great Person From Before Time' href="http://{{localhost}}/login"><img id='logOn1' {{logOn | safe}} onmouseover="getid(this);" /></a>
+
+<span style="color:blue;margin-left:39px;">{{or}}</span>
+-->
+
+
+<!-- You must drop the src in using this variable, {{signUp | safe}}, else the little image proxy shows up looking for an image.	-->
+
+<!--
+<a href="{% url 'myFrog:signup' %}">Sign Up</a>
+-->
+<!--
+<a title='Sign up Super Super Cool' href="http://{{localhost}}/signup">
+-->
+    <!--
+    <img id='signUp1' {{signUp | safe}} onmouseover="getid(this);" /></a>
+    -->
+
+<!-- To get all the features working.  -->
+<!--
+<span style="color:blue;margin-left:39px;">{{featurs working}}</span>
+-->
+
+			</nav>
+
+
+
+			<article>
+
+
+
+			</article>
+
+
+
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

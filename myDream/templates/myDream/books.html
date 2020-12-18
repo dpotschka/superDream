@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+{% load static %}
+
+
+    <head>
+
+	<title>Dream Books</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <meta name="description" content="Stock Market Solution and builder of your website!">
+    <meta name="keywords" content="the hyper Dream, theHyperDream.com, stock market solution,
+    Stock Market Solution, builder of your website, dream, motivate, love, faith, hope, health, wealth,
+    happiness, ideas, great ideas">
+
+    <meta name="author" content="David H Potschka">
+
+    <meta property="og:title" content="Dream Books"/>
+    <meta property="og:description" content="Stock Market Solution and builder of your website!" />
+    <meta property="og:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta property="og:url" content="https://www.thehyperdream.com/myDream/books/" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="243074516150509" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Dream Books" />
+    <meta name="twitter:description" content="Stock Market Solution and builder of your website!" />
+    <meta name="twitter:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta name="twitter:url" content="https://www.thehyperdream.com/myDream/books/" />
+
+
+    <link rel="shortcut icon" href="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/static/myDream/webImages/LogoF240x240.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+        <!-- This is for your scroll buttons so they work properly, see the notes at the bottom of this file.
+		for this to work locally in chrome you must use the cmd shell and navigate to /chrome.exe and run it with this
+		flag --allow-file-access-from-files
+		-->
+
+		<script type="text/javascript" src="/static/myDream/js/prefixfree.min.js"></script>
+
+
+
+<meta name="description" content="Now is the time!">
+<meta name="keywords" content="theHyperDream, thehyperdream, the hyper dream,
+motivate anyone, love, health, wealth, happiness,
+ideas, great ideas, guru,
+hope">
+<meta name="author" content="David H Potschka">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+            body {
+                    background-image: url("/static/myDream/webImages/asses.jpg");
+                     background-repeat: no-repeat;
+                      background-size: 100% 100%;
+                 }
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-width:99%;
+}
+
+img {position:relative;}
+
+iframe {position:relative;}
+
+p {position:relative;
+    background: rgba(76, 175, 80, 0.90);
+    padding:5%;
+}
+
+		</style>
+
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code  -->
+
+
+    </head>
+
+<script>
+fbq('track', 'ViewContent', {
+value: 1,
+currency: 'USD'
+});
+</script>
+
+
+	<body>
+
+
+<video autoplay muted loop id="myVideo" poster="/static/myDream/builderImages/boat-0.png">
+  <source src="/static/myDream/builderImages/boatNew.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+		<header>
+		    <!--
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+-->
+
+
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+
+
+<h3>
+
+<!--
+<a href='https://thehyperdream.webflow.io/thegoods#team'><img id="logoPic" style="margin-left:20px; margin-top:20px" height="49px" width="49px" src="/static/myDream/webImages/LogoF240x240.png" /></a>
+-->
+
+<a href='https://www.thehyperdream.com'><img id="logoPic" style="margin-left:20px; margin-top:20px" height="49px" width="49px" src="/static/myDream/webImages/LogoF240x240.png" /></a>
+
+<!--
+<a href="https://thehyperdream.webflow.io/"><img id="builder" height="25px" width="141px" src="/static/myDream/webImages/buttons/builder1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a href="https://www.thehyperdream.com"><img id="thd" height="25px" width="141px" src="/static/myDream/webImages/buttons/thd1.png" onmouseover="getid(this);" /></a>
+
+
+<a href="https://www.thehyperdream.com/myDream/guitarVideos/"><img id="guitarVideos" height="25px" width="141px" src="/static/myDream/webImages/buttons/guitarVideos/dgv1.png" onmouseover="getid(this);" /></a>
+<a href="https://www.thehyperdream.com/myDream/artForSale/"><img id="artForSale" height="25px" width="141px" src="/static/myDream/webImages/buttons/artForSale/artForSale1.png" onmouseover="getid(this);" /></a>
+
+<a href="https://www.thehyperdream.com/myDream/stockMarketPortfolio/"><img id="stocks" height="25px" width="141px" src="/static/myDream/webImages/buttons/stocks/stocks1.png" onmouseover="getid(this);" /></a>
+
+<!--
+<a href="http://www.whatdoesthefroggot.appspot.com/"><img id="theFrog" height="25px" width="141px" src="/static/myDream/webImages/buttons/theFrog/theFrog1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a href="https://www.thehyperdream.com/myDream/contact/"><img id="contact" height="25px" width="141px" src="/static/myDream/webImages/buttons/contact/contact1.png" onmouseover="getid(this);" /></a>
+</h3>
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+<!-- My Amazon ad puppies training -->
+<!--
+<span style="color:red;margin-left:30px;">Search all 6 million</span><br>
+<span style="color:red;margin-left:30px;">Amazon products!</span><br>
+<a href="https://www.amazon.com/gp/product/B00MW8G62E/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=thehyp0e5-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B00MW8G62E&linkId=532d7ff335e24670a3283d7efb5ddbb1"><img src="{% static '/myDream/adImages/amazon/puppy.JPG' %}" width='235px' height='294px'></a>
+<p style="font-size:12px;color:red;margin-left:30px;">I am an Amazon associate, <br>thanks for supporting <br>theHyperDream!</p>
+-->
+		   </nav>
+
+
+
+			<article>
+
+
+
+
+
+
+<p style='font-size:1em; text-align: center;'>
+<iframe style="margin:auto;" width="560" height="315" src="https://www.youtube.com/embed/co4YpHTqmfQ" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<br>
+
+<br>
+<p style='font-size:1em;'>
+
+MOTIVATE ANYONE with these 50 QUESTIONS!<br><br>
+&copy; 2016 <a style="margin-left:0px;" href="https://www.theHyperDream.com">theHyperDream.com</a><br>
+The first half of this book is FREE!  If you find it helpful please purchase some
+<a style="margin-left:0px;" href="https://www.thehyperDream.com/myDream/artForSale">art work </a><br>
+and I will send you the second half for Free as well!<br><br><br>
+
+Please click "CONTACT" and make a request, if you want my two other books:
+<br>
+"Internet Money" and "Stock Market Solution".  "Stock Market Solution" is currently free <br>
+on my STOCKS page, you can download it from there.
+<br>
+You will have to buy a $10 piece of art if you want the "Internet Money" book!<br>
+
+</p>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p style='font-size:1em;'>
+
+INTRODUCTION<br><br>
+
+The concepts in this book can be adapted to any person in any situation.<br>
+The first few points start off with the example of getting a<br>
+teenager off drugs.  <br><br><br>
+
+
+zero.  Hi Nick, How are you?  <br>
+a) This first one is for the parents and it is pretty obvious; don't call your teen a zero and do not 'talk over' your child.  <br>
+They are actually just looking for someone to listen to them.  <br><br><br>
+
+
+1.  Hi Nick, did you accomplish your goals to raise your self-esteem today?<br>
+a) Were your goals too large to accomplish?<br>
+b) Were your goals to small and seemed like a waste of time?<br>
+c) Were your goals at a good challenge state for where you are now?<br>
+d) Were your goals challenging and after you accomplished them did you feel a sense of happiness and pride?<br>
+Are you telling the truth.  If you lie to me you are lying to yourself.  How is your regret level?<br>
+e) Doesn't know the definition of 'self-esteem'.  It is not the same as confidence.<br><br>
+
+If you can't tell if your teenager is lying then you might want to read a different book every day<br>
+related to the questions in this book.  Or since we live in the modern world...<br>
+Google - 'How To Tell When Someone Is Lying'.<br><br><br>
+
+
+2.  Hi Nick, how is your regret level?<br>
+a) Don't have any regret?  Does not know the definition of regret or is blocking regret with constant drug<br>
+consumption.<br>
+b) How anxious are you feeling?  - hands shaking, mildly paranoid, don't give a fuck, met a nice person today?<br>
+If his answer is 'don't give a fuck', WARNING:  Call in the uncle/cops/bitch to apply pressure.<br>
+Book:  Feel The Fear And Do It Anyway.<br><br>
+
+"That I have but one life to lose for my country" to Hale.<br>
+"To ______ deeply is to life afresh":  Thoreau.<br>
+"What if" feeling.<br>
+Lament.<br>
+Never forgive oneself.<br>
+Product of hindsight, sometimes.<br>
+Rue.<br>
+Wish undone.<br><br><br>
+
+
+3.  Hi Nick, what are your goals?<br>
+a) Don't know.<br>
+b) Which one is the most important at this time?<br>
+c) Don't give a Fuck.  See question 2 WARNING, and create subliminal/direct intervention.  These questions<br>
+are a subliminal intervention.  It is your job as a parent to know which question you should be asking at<br>
+which time.  That is trial and error.  Don't push too hard but don't be too soft either.  Sometimes saying<br>
+nothing and skipping his question for the day/s  is your correct choice.<br>
+And,<br>
+Love Will Work on Planet Earth.<br>
+Pick the hardest positive thing you can think of<br>
+and make it a hobby/goal (math/computers/music/art/sports etc.).<br>
+Did someone say love.<br>
+Can love be a hobby which I love.<br>
+Don't make what you love, 'your job',<br>
+you may learn to not love it anymore.<br><br><br>
+
+
+4.  Hi Nick, are you worth a damn?<br>
+To get what you want, you have to deserve what you want.<br>
+a) Don't be a victim of your own making.<br>
+b) There are no short cuts.<br>
+c) How aware are you of your environment?  Increase your awareness daily.  Focus.<br>
+d) Would you bet on yourself?<br>
+e) Smelling the roses is required, but now is not the time.<br>
+f) Be on an upward path to deserve more!<br>
+g) The world is way more fair than the media tells you.  Although it is not perfect.<br>
+h) People who deserve more, get more.  Don't talk about normal types of trauma, we all have that.<br>
+Talk about physical health issues or extreme mental trauma, yes.  What you do now is what sets the stage for what happens next.<br>
+How you play your part is all that concerns me.  Play a bigger part.  Perseverance, patients, wisdom, awareness.<br>
+i) Don't fall into the trap of making specific rules.<br>
+j) Character traits - balance.  Step by step.<br>
+k) Bet on yourself.<br>
+L) Now invert, who wouldn't you bet on, and try not to be that person.<br><br>
+
+What is your plan to start deserving what you want from life?<br>
+On a scale of 1-10 what is your awareness, deserve it, worth a damn factor?  Why do you think you are at that level?<br>
+How can you increase it?  If you look back in time at yourself, would you bet on yourself compared to everyone else?<br>
+If the answer is no, then what do you have to do now, to be the person that you would bet on?<br>
+Are you worth it?  Do you deserve it?  Everyday go to bed a little bit wiser, more aware.<br><br><br>
+
+
+"I will not try to convince you to love me, to respect me, to commit to me.  <br>
+I deserve better than that; I AM BETTER THAN THAT...Goodbye."  <br>
+Steve Maraboli <br><br>
+
+
+5.  Hi Nick, what is the basic law of nature?  Change.<br>
+a) Adapt to survive.  You don't have to be the smartest, just be good at adapting.<br>
+Those who are the best at adapting are the most successful.<br>
+b) Observe, use the information to formulate a better plan.<br>
+c) Don't change to quickly/slowly, give things a chance.<br>
+d) Ancient invalid thought is trying to control you, be aware of this. Erase it.<br>
+e) The world is not always completely black and white, it is a gradient of space from black to white with<br>
+many different colors in between.<br>
+f) Failure is a learning mechanism an experiment.  Move on to the next event after you have learned;<br>
+continuing on towards your goal.<br>
+g) Adopt an evolutionary stable strategy.  Nature.<br>
+h) Be flexible.  For every action there is an opposite and equal reaction.<br>
+i) Don't take things personally.<br>
+j) Read the obvious signs to search out the best path.  Start with your health.<br>
+k) If you want to know the truth, ask why, why, why; then how.<br>
+L) Stay strong, adaptation and change can hurt sometimes, but it is better than the slow death of drug addiction.<br>
+Embrace the fear and the joy and excitement of the adventure.<br>
+m) Build upon your strengths.<br><br>
+
+What is the number one area in your life where you have been to 'black and white' in your approach?<br>
+What is your next experiment regarding Health or Wealth or Love or Happiness?<br><br><br>
+
+
+Adapt yourself to the things among which your lot has been cast and love sincerely the fellow creatures
+with whom destiny has ordained that you shall live.  <br>
+Marcus Aurelius <br><br>
+
+6.  Hi Nick, have you experienced any humility today?<br>
+a) Not outward humility, but a humble inward perspective.  Being able to listen and to be extremely coach-able.<br>
+b) Listening with understanding and then going out and doing it.<br>
+c) To make this type of humility one of your instincts, a part of who you are,<br>
+will be of great benefit.<br>
+d) I need your help.  How many mentors have you acquired in your life?<br>
+e) You need to know that you don't know everything, be humble on the inside.<br>
+Read a book a week.  A factual book or biography.<br>
+f) What can you learn from the people around you; learn from everyone you meet.<br>
+Even if you learn not to be like that person if they are not so happy.<br>
+g) Your greatest skill must be that you are coach-able.<br>
+h) Take notes about the things you learn from the people you meet.<br>
+j) The more mentors you have the higher your quality of life will be.<br>
+Sometimes life as we find it, is too hard for us, we use diversions, intoxications, and gratifications to avoid life.<br>
+Humility triggers a fear response and stops us.  Feel the fear and do it anyway.<br>
+k) You must go out and do what is necessary.  Prove you are humble and need to learn.<br>
+Every minute counts, you never get the days back.  Read more, look for the best part of the book (you don't have to read<br>
+the whole book, unless it is one of the good ones).  You can re-read the good books over and over again.<br>
+Go to seminars, observe your competitors, increase the amount of time you spend on these ideas.<br>
+Find mentors who can teach you, take notes.<br><br>
+
+What is the number one area you have not been humble in action; the areas are health, wealth, love and happiness?<br>
+What is the tangible thing you are going to do different?  Now go do it!  You can find the meaningful life!<br><br><br>
+
+
+Humility is the true key to success.  <br>
+Successful people lose their way at times.  <br>
+They often embrace and overindulge from the fruits of success.  <br>
+Humility halts this arrogance and self-indulging trap.  <br>
+Humble people share the credit and wealth, <br>
+remaining focused and hungry <br>
+to continue the journey of success.  <br>
+Rick Pitino <br><br>
+
+7.  Hi Nick, which mentors were you following today?  <br>
+a) Use mentors to shave years off your learning curve.  <br>
+b) Who are you going to read about?  Who are you going to aspire to be like?  <br>
+c) Life has many hard questions.  You will never find all the answers from one person.  <br>
+You will need to find a handful of people to learn from.  <br>
+d) Good artists copy, great artists steal.  Go steal the knowledge you need to succeed.  <br>
+Stand on the shoulders of giants.  A rising tide raises all ships.  <br>
+e) Self learning; capitalize on this ability you have!  <br>
+f) Having a mentor that you can learn from in person will teach you more than any other form of learning.  <br>
+g) The older your mentors are the more experience they will have.  <br>
+h) One third of your time should be spent with people below you (you are their mentor).  <br>
+One third of your time should be spent with people on your level (they are your friends).  <br>
+And one third of your time should be spent with mentors in your field of interest who are 10 - 20 years older than you.  <br>
+When you are in a room with your mentors you should be talking less and listening more.  When you are the mentor in the
+room then you should be talking more and listening less and
+when you are with your friends you should all be talking about the same amount.  <br>
+i) Don't feel uncomfortable with people who are above you, push through the fear.  <br>
+j) When you succeed you party, but when you fail you ponder and grow.  <br>
+k) It's your job as the student to 'get out of' your mentors what you need from them.  They might be rough sometimes.  <br>
+The best mentors are not saints; you will have to toughen up!  <br>
+L) You must handle the stress when you are with your mentor.  <br>
+m) Your mentors are not perfect.  Don't expect perfection from anyone.  Learn their good points!  <br>
+n) All the greats had a mentor and then they became the mentor.  Even a great book is a mentor.  <br>
+o) You will learn in ways that you don't understand at first, and then it will become clear later.  <br>
+p) Nothing is impossible to he who will try!  Try, try, try again!  <br>
+q) Take it slow, set an 18 month goal to create a relationship with an in person mentor.  Send them a letter.  <br>
+Bump into them on the elevator where their office is.  But don't become a stocker. <br>
+r) Phone them, say you would like to interview them for an essay (or blog interview/book club etc.) you are writing <br>
+and after the interview send them a little gift.  <br>
+s) Sometimes you will have to give up, but try 10 or 20 times to get a relationship with the mentor of your choice.  <br>
+t) Get a list of possible mentors.  Think big, one of them will respond.  <br>
+It may take 18 months to get a high/medium/low level mentor.  <br>
+u) Pitfalls - mentors are human and sometimes you need to withdraw from the relationship.  <br>
+The mentor may not have a lot of time; they only see you once every 5 years, that is not a mentor.  <br>
+v) Books and videos are a mentor but a mentor in person is a way better way to learn.  <br>
+w) Don't forget to be flattering, and don't forget that little gift.  Try to give something back.  <br>
+Three 'gives' for one piece of knowledge.  Don't be clingy, be interesting, <br>
+read more and acquire knowledge.  Become totally aware.  <br><br>
+
+Who are your 10 potential mentors (actual people)?  A listers, B listers, C listers...  <br>
+How are you going to cultivate a relationship with them within the next 18 months?  <br>
+Have fun, this is something exciting to do!  <br><br><br>
+
+
+I never had a strategy about my life.  <br>
+I didn't have enough information to have a strategy.  <br>
+I'm the first person in my family to go to college.  <br>
+I had no family mentors...  <br>
+Alan Dershowitz <br><br>
+
+8.  Hi Nick, are you having fun acquiring knowledge?<br>
+a) Are you taking steps to implement that knowledge towards your desires for health, wealth, happiness and love?  <br>
+b) How are you assimilating knowledge?  <br>
+c) Are you finding the best sources to get the best information?  <br>
+d) Are you tuning in on the awareness factor?  <br>
+e) Who are your rich friends, who are your poor friends?  Not just money here but everything about them.  <br>
+f) What are the differences between these types of friends?  Do you notice the differences?  <br>
+g) Don't try to teach pigs how to fly, because they don't like it.  <br>
+You can judge a tree by its fruit.  The stronger the wind, the stronger the tree.  <br>
+h) The way you speak makes a difference.  It is a reflection of the way you think, of what's in your brain.  <br>
+i) You don't have to have all the answers.  But watch out for your opinion, maybe it needs more experience.  <br>
+What are the known facts (which of course can change), quote other people, the experts from the past.  <br>
+j) Tip - Turn a service into a market place.  You can make way more money.  <br>
+k) People who are successful want to know what YOU can teach them!  <br>
+L) Getting advice from rich (not just money) friends shouldn't become an affront to your pride.  <br>
+m) Become a self-learning machine.  Who are your happy friends and who are your poor friends, <br>
+what are the differences?  <br>
+n) Your successful (happiest) friends are disciplined, always doing the right thing.  Make no mistake about it!  <br>
+Everything in moderation.  Be hyper aware of this!  Are you worth a damn?  <br>
+o) Half of your success is just understanding what you are reading here; the rest is your actions.  <br>
+p) How do your friends walk, how do they talk, when do they talk, what is their body language saying, <br>
+pay attention to all the details (patterns).  <br>
+q) Make math a hobby, all my rich friends know math (patterns), learn the language of money (definitions).  <br>
+You may not need calculus; everything in moderation.  <br>
+r) What do your friends eat, are your rich/poor friends eating that which contributes to who they are?  <br>
+Is there a pattern?  Yes of course!  Every decision a person makes defines the path they are on <br>
+and where they will eventually end up.  Which path are you on at this moment?  <br>
+s) Tune your mind to the concepts (behaviours) of your rich friends and poor friends.  <br>
+Accurate thoughts and inaccurate thoughts, which friends have which thoughts?  <br>
+What is the risk reward for all choices and actions, who do you want to spend time with?  <br>
+t) A great detective has found the path to happiness, and is following it.  Observe.  <br>
+u) If you don't have any friends, start with your family or a book, <br>
+become an interesting person and then get out there and have fun.  <br>
+v) Don't expect to get the advice you are looking for, the truth can be mysterious.  <br>
+But as a seeker you will find it!  You are a seeker as you have read this book up to this point, <br>
+congratulations you are on the correct path!  <br><br>
+
+What is one profound lesson you have learned, that shows the difference between one rich friend and one poor friend?  <br>
+Stay reliable and take, this, step!  <br><br><br>
+
+
+Wisdom is the right use of knowledge.  <br>
+To know is not to be wise.  <br>
+Many men know a great deal, and are all the greater fools for it.  <br>
+There is no fool so great a fool as a knowing fool.  <br>
+But to know how to use knowledge is to have wisdom.  <br>
+Charles Spurgeon <br><br>
+
+9.  Hi Nick, are you getting better at seeing that which influences you unconsciously?  <br>
+a) Is the media sculpting your thoughts?  Are they just trying to make money on other peoples pain/pleasure?  <br>
+Take a break from the news.  Look at the last 6000 years instead, there is some good there and way more wisdom.  <br>
+b) Is the media bias skewing what you think because they are telling you the same thing over and over?  <br>
+Not just the media, but anything you read/see/hear from any constant source. <br>
+c) Does the term 'conspiracy theory' influence you?  Is it really a conspiracy or just another spin <br>
+on the same old story to sell you more magazines etc?  <br>
+d) Do you think that documentaries would give you a better view of what is really going on?  Of course!  <br>
+e) Will a conscious effort on your part create what you want in life?  Of course!  <br>
+Learn to enjoy the good grind, find the hard work which makes you tap dance your way to work.  <br>
+Instead of waiting for the lottery ticket to 'come in' take a slab of marble and chip away at it <br>
+one bit at a time (the daily grind) until it is sculpted the way you want it to be.  Your life.  <br>
+f) How will you create health/wealth/love/happiness?  Which piece of marble will you start with?  Find your strengths.  <br>
+That is your natural destiny.  <br><br>
+
+What is your style/archetype:  <br><br>
+
+Action - <br>
+f1) Protagonist - An advocate or champion of a particular cause or idea.  <br>
+f2) Antagonist - A person who actively opposes or is hostile to someone or something; an adversary.  <br><br>
+
+Thinking - <br>
+f3) Reason - The Reason archetypal character is calm, collected, and cool, perhaps even cold/logical.  <br>
+f4) Emotion - The Emotion character is uncontrolled and driven by feelings.  As in real life, Reason is <br>
+not inherently better than Emotion, nor does Emotion have the edge on Reason.  <br><br>
+
+Social - <br>
+f5) Sidekick - The Sidekick is the faithful supporter, usually attached to the Protagonist.  <br>
+f6) Skeptic - The Skeptic balances the Sidekick.  The Skeptic is the disbelieving 'opposer'.  <br><br>
+
+Practical - <br>
+f7) Guardian - The Guardian functions as a teacher/helper who represents the conscience of the mind.  <br>
+This is a protective character that removes obstacles and brightens the path ahead.  <br>
+f8) Contagonist -  Archetype character representing the motivations of temptation and hinder.  <br>
+A character who is generally on the hero/heroine's side in the story as they want the hero/heroine to achieve their ultimate goal.  <br><br>
+
+You are not just one of the above but a blend of two or more.  See if you can find your blend.  <br>
+Try to figure out the style/blend of people you know.  <br>
+Attempt to relate to people with the type of speech that their blend might broadcast.  <br>
+You will have to contemplate this for many months to get good at it.  <br>
+Memorize the definitions of the 8 archetypes first.  <br><br>
+
+Don't let the news/magazines/internet etc. influence your natural destiny.  <br>
+Read factual/biographical books which are within your style.  <br>
+Enlightenment - knowing when YOU, are not enlightened!  <br>
+An enlightened person is someone who has a deep understanding of what their personal blend type looks like in different situations.  <br>
+Your blend type is in a constant state of flux.  Know what state you are in and put yourself in a beneficial state
+for the current situation you find yourself in.  <br>
+g) Do you embrace the truth?  Don't be tethered by conventional thinking.  <br>
+Be only bound by the laws of physics, everything else is open for discussion.  Control the media you consume.  <br>
+Beware the over simplification of things, this is called narrative bias.  Find the full story.  <br>
+Beware short stories which have some truth, the details are not all there.  The internet has tons of narrative bias.  <br>
+h) It will take at least two months to rewire your brain, but give yourself more time and work on it continuously.  <br>
+Plant those seeds and nurture them to full bloom and then the planting season starts again, over and over.  <br>
+i) If you start with a penny and double it every day for a month, how much money will you have at the end of the month?  <br>
+Or would you rather have $1,000,000 given to you with no doubling?  Which do you choose?  <br>
+The penny doubling of course!  Do the math!!!<br>  What is your end goal?  <br>
+1 penny - 2 pennies - 4 pennies - 8 pennies, and then on day 5 you have 16 pennies, continue this math...  <br>
+There is no quick fix, chip away at the rock.  Day after day step by step, give yourself time and in 18 months <br>
+you will have advanced.  <br><br>
+
+What is the number one area in your life (health/wealth/love/happiness, pick one) where you have taken the quick <br>
+fix approach, and what was the result?  What will your new approach be?  <br>
+And write down the specific steps you will take.  <br>
+There are no short-cuts.  <br>
+Use your style, it is great!  <br><br><br>
+
+
+Seemingly minor yet persistent things penetrate the mind over time  <br>
+making it difficult to ever realize the impact; hence, <br>
+though quite unfortunate, the most dangerous forms of corruption <br>
+are those that are subtle and below the radar.  <br>
+Criss Jami <br><br>
+
+10.  Hi Nick, are you out of the cage and in the jungle?  <br>
+a) Learned optimism is a survival trait; learned pessimism will put you back in the cage.  <br>
+b) A dog in a closed box with an electric pad underneath it gets shocked every 2 minutes and since <br>
+it can't get out of the box it eventually learns to just lay down every time it gets shocked.  <br>
+Then the lid is taken off the box and the dog gets shocked again.  What do you think the dog does?  <br>
+It just lays down again, it has acquired learned helplessness (pessimism).  This experiment was actually done.  <br>
+Luckily you are not a dog and have the capacity to change your mental framework; your subconscious conditioning <br>
+that others and the 500 year old archaic mind have imposed upon you.  You are now out of the cage and in the jungle!  <br>
+c) Our modern education system also tends to breed learned helplessness.  They tell you what the goal is, <br>
+they tell you what book to read and they tell you what they think you should learn.  <br>
+Instead of just saying "here is a library, go there, find what interests you, and learn it!"  <br>
+Eventually you become dependent on someone telling you what you should do and think and the next thing you know <br>
+you are a salary slave working in some job you hate.  <br>
+d) Self education is of primary importance.  Read a book a day and you will advance faster than light!  <br>
+There is nothing wrong with going to school but learn to keep an open mind and explore outside of the cage as well.  <br>
+e) And of course don't just wait for the next book to come out, use what you know so far and take action to <br>
+acquire the things you want regarding health, wealth, love and happiness.  <br>
+f) Depending on what country you live in, you may not want to wander too far into the jungle.  <br>
+You must keep everything in perspective depending on your current situation.  <br>
+g) Take a risk, no pain, no gain.  The risk these days is so small you might as well get out there and get the rewards.  <br>
+h) Some things are out of our control but most are not.  Learn to know the difference by taking action and trying.  <br>
+i) The antithesis of helplessness is creativity.  Innovate your way out of this learned helplessness.  <br>
+j) What did you want to do career wise when you were 14?  Why didn't you pursue that?  Did you innovate your way <br>
+into that field or did the learned helplessness stop you.  <br>
+Of course not all dreams are feasible and it is wise to give up on them and move on to something more realistic.  <br>
+k) If you do enough practice you will be able to grow into the role that makes you happy!  <br>
+Work hard, never give up!  <br><br>
+
+Write down one specific instance (health, wealth, love, happiness) from your past where you have felt helpless.<br>
+Write down how you would have changed that.  Be as specific as possible.  <br><br><br>
+
+
+I know of nothing more moving, indeed semi-tragic, <br>
+than the yearning helplessness in the face of a dog, <br>
+who understands what is said to him, <br>
+and cannot answer!  <br>
+Bayard Taylor <br><br>
+
+11.  Hi Nick, are you learning how to achieve the integrated good life?  <br>
+a) Linear reductionist - Reductionism refers to several related but distinct philosophical positions regarding the <br>
+connections between phenomena, or theories, "reducing" one to another, usually considered "simpler" or more "basic".  <br>
+We must move past a linear reductionist view of our life's work.  <br>
+We have been trained to compartmentalize our lives; we need to integrate the four pillars of life.  <br>
+Your health, wealth, love and happiness must be working in synergy.  <br>
+Friends, co-workers, church members etc, everyone working together with you.  <br>
+"I Hate Monday's", "Thank God It's Friday" etc, these are ideas of compartmentalized thoughts and <br>
+close your mind to better thoughts.  <br>
+b) Eudaimonia - A Greek word commonly translated as happiness or welfare; however, "human flourishing" has <br>
+been proposed as a more accurate translation.  <br>
+The four pillars of eudaimonia - In a sense we are reducing self fulfilment to 4 things (health, wealth, love, happiness) <br>
+but they should not be separated, they should be integrated.  <br>
+You don't just do health on Monday, then wealth on Tuesday and Wednesday, and then love is just on Friday; everyday, all four.  <br>
+This is of course obvious but still people compartmentalize even further until their mind fragments into chaos.  <br>
+Wear this green shirt on Saturday that blue shirt on Monday, drive car number 7 on Sunday etc.  If you have 7 cars lol.  <br>
+Some schedule is necessary but the schedule should be integrated with all the facets of self fulfilment.  <br>
+And on some days just do nothing, maybe you need a break from the daily grind.<br>
+And take a break from technology now and then, <br>
+you will get a different perspective and new ideas will flow into you.  <br>
+Go people watching it will stimulate your creative side.  <br>
+c) If you're an adult remember this rule:  Everything should be within a two mile distance from you.  <br>
+Your job, the store etc., integrated, closer together.  <br>
+d) The seven theory:  Life with too many ups means life with many downs, everyday should be a 7.  Everyday should <br>
+be a good day.  Integrated, smooth, not chaotic and out of control.  One day up, one day down, that's no good.  <br>
+e) Focus every moment of your life on the integration of health, wealth, love, and happiness; <br>
+and search for purposes larger than yourself to achieve maximum fulfilment.  <br>
+f) Lift weights while you are on the phone, synergy, integrate everything.  Read a book then take a nap to <br>
+re-energize your brain so you can do more each day.  <br>
+g) If you're single, get a job where there are people you want to meet.  Integrate love and work and everything else.  <br>
+h) Ponder this idea of integration but don't beat yourself up if you can't integrate everything.  <br>
+i) Take some time, have fun with this idea, you can do it!  <br><br>
+
+Write down how you can integrate two of the 4 pillars of life.  Choose any two you like and integrate them.  <br>
+Start with health and work first, because those two are the easiest.  Or start with which ever two you want if you have <br>
+those two linked already.  <br><br><br>
+
+
+"You cannot imagine the craving for rest that I feel - a hunger and thirst.  <br>
+For six long days, since my work was done, my mind has been a whirlpool, <br>
+swift, unprogressive and incessant, <br>
+a torrent of thoughts leading nowhere, <br>
+spinning round swift and steady"  <br>
+H.G. Wells <br><br>
+
+12.  Hi Nick, are you thinking like a billionaire?  <br>
+a) Which books did you scan today?  What type of information have you been focusing on from the internet?  <br>
+b) Is your "super power goal" to be the fastest reader in the world?  <br>
+c) Do you know what the difference is between a rich man's house and a poor man's house?  <br>
+A rich man's house has a library and a poor man's house does not!  <br>
+d) Do you have mental blocks when it comes to books?  <br>
+Are you inventing reasons why you can't do it?  <br>
+Are you saying it's not important?  <br>
+Are you saying it's not what's in your head, it's what you do?  What you do is in your head, first!  <br>
+Are you saying it's about street smarts and not book smarts.  Who do you think designs the streets and designs the pavement?  <br>
+There are more streets (paths/opportunities) at university/education than there are at skid row!  <br>
+Is not information power???  <br>
+e) Survival machines which can simulate the future will win over survival machines which only rely on trial and error.  <br>
+A simulation takes seconds to test, while trial and error can take days or even months to test and can sometimes be fatal.  <br>
+f) Three failures and you quit?  No, you never quit, simulate 11 strategies, then pick the one you think is best and try again!  <br>
+Repeat...  <br>
+g)  It's ok to learn by making your own mistakes (trial and error), but it's a heck of a lot easier to learn from other peoples mistakes.  <br>
+Read about their experiences, and avoid the pitfalls that they fell into, and learn the smart ways that they eventually found.  <br>
+You only have so much time on this planet and you better move as fast as possible or you will be forever in your sad cage.  <br>
+h) Who are your counsellors, who are you seeking out to help you?  Those who are successful make war with a multitude of wise counsellors;  <br>
+accountants, doctors, advisers, experts etc.  <br>
+i) Read enough books on a subject and the wisdom gained will become instinctual.  <br>
+j) You don't have to read the entire book.  Look for the golden nuggets in the book.  <br>
+Scan the inside cover, the contents, the back cover, the last page of the book, and the index.  <br>
+Flip to the 'chapter title' which peaks your interest.  <br>
+You must find the best books.  Google - 'Best health/wealth/love/happiness books'.  <br>
+Write notes in the book and come back to the book later and read some more of it.  <br>
+You can read more than one book at a time, you don't have to read the entire book.  <br>
+There are too many books, and maybe another book has a higher calibre of gold.  <br>
+Just get one nugget of gold then repeat this process with another book.  <br>
+You can always come back to that book later!  <br>
+Make your target to read one great book per week.  Another super important technique is to read three great books a day.  <br>
+In the morning read a classical book that has survived the test of time.  <br>
+In the afternoon read a factual/how to book (then take a 15 - whatever, minute power nap) <br>
+and read a biography/autobiography before bed, this will build your courage.  <br>
+Just two to 40 minute sessions is all it takes.  <br>
+Some fiction is ok, but it depends on the type of fiction.  Don't read horror before bed time.  <br>
+Go easy on the fiction, how much truth is there?  <br>
+k)  Side note about sleep:  In no time during history did humans ever fall asleep without some kind of noise in the back ground except in <br>
+the modern world.  If you are having trouble falling asleep at night experiment with white noise or nature sounds from your sound system.  <br>
+L) Break the rules (but not the law) when it comes to reading.  You can also read the same great book over and over; it will become part <br>
+of your instincts.  <br>
+Leaders are readers, the ability to simulate the future without wasting time on trial and error and fatal mistakes!<br>
+Now go, read, it's fun!  <br><br>
+
+What is it for you that holds you back from reading, write that down?  <br>
+Don't let bad reading experiences (crappy boring books you were not interested in) <br>
+from middle school hold you back, <br>
+push through that early pain and you will be amazed and gain.  Rewire your brain, <br>
+reading is one of the fastest ways to do it!  <br><br>
+
+What pace of reading are you going to commit to?  Write down the titles of the next three books you are going to read.  <br>
+Google - 'the best books on...' (the subjects that interest you the most).  <br><br><br>
+
+
+Vision is perhaps our greatest strength...it has kept us alive to the power <br>
+and continuity of thought through the centuries, <br>
+it makes us peer into the future and lends shape to the unknown.  <br>
+Li Ka-shing <br><br>
+
+13.  Hi Nick, how are you, are you getting stronger, are you toughening up? <br>
+Stoic - To forego present pleasure in order to receive future rewards.  <br>
+Epicurean - Live for the now, eat drink and be merry for tomorrow we die.  <br>
+YOLO - You only live once.  <br>
+a) A nation is born stoic and dies epicurean.  That statement has been proven throughout history, over and over.  Memorize it.  <br>
+Now you don't want to be in a state of stoicism continuously, but for every action there is an opposite and <br>
+equal re-action.  <br>
+b) If you party all the time you die early (health goes to zero) <br>
+and you experience depression every time you are coming down.  <br>
+Eventually the partying gets boring and so, do, the brain, dead, people, you are partying with!  <br>
+After that the regret bites you hard and even suicide comes to your plate as you look back and see nothing, not even memories.  <br>
+No memories of happiness and accomplishments that helped others or even yourself.  <br>
+c) Toughen up, taking some pain today for some awesome gain tomorrow.  <br>
+Face the fear, it's excitement and overcoming it is exhilarating!  It is good stress.  <br>
+d) Stress can be good or bad, it all depends on how you think about your stress.  <br>
+That has been scientifically proven (see - https://en.wikipedia.org/wiki/Psychological_stress) . <br>
+Now I'm not talking about a constant threat of violence against you, that type of stress would <br>
+be bad no matter how you think about it, but we don't live in Afghanistan!  <br>
+Toughen up, what's the worst thing that can happen to you?  Death?  <br>
+e) This one's over the top - Adversity makes men, prosperity (weak drug addicts, soft life styles, absolute power
+corrupts absolutely etc.) can make monsters.  Scary.  <br>
+f) There are three types of people in the world:  <br>
+People who make things happen, <br>
+People who watch things happen, <br>
+and People who wonder what happened!  <br>
+g) How soft are you?  If you are wondering what happened to your life, toughen up.  <br>
+h) Modern convenience is great but it comes at an expense; the expense of weakening our will to create, to survive, to build, to dream!  <br>
+i) Toughen up, lose your technology for a month, go camping, sleep on the hard ground without a pillow.  <br>
+j) Do a marathon, ride a bike, go for a walk to the store instead of taking the bus.  <br>
+k) Don't let the media sell you depression pills, diabetic foods, instant gratification in the form of plastic wrapped pleasures.  <br>
+Even heavy metal is just pre-packaged rebellion.  They just want your money.  <br>
+L) Ok, going crazy now and then is fun, but make it a ritual you do once a month or so, but not every day.  <br>
+You will fall into the hole and lose your sole (perspective).  Sounds like heavy metal lyrics lol.  <br>
+Got to admit, art, music and other creative endeavours (sculpting your body, sports) are very cool.  Toughen up and do those things.  <br>
+Sell your own piece of the pie, go for the good life, toughen up and get the good life, don't just lay there <br>
+all helpless and stoned.  Boring...  <br>
+m) When you are in a room full of people and you don't know who the sucker is, YOU are the sucker.  <br>
+n) Anything worth doing is never easy.  It's about the journey, the struggle, the good fight, not the destination.  <br>
+Look at some of those people who win the lottery, 3 years later they are broke again...go figure, do the math.  <br>
+o) Face your fears, today is a good day to die (don't over dose though, that's boring)!  <br>
+p) The more you toughen up the less of a slave you will be to your environment.  <br>
+The reward will be infinite, stick with it, just do it.  Just do it to mess with your brain when you don't feel like it.  <br>
+That will rewire your brain.  <br>
+You control your brain, your brain does not control you.  <br>
+Build slowly, take 18 months, don't go overboard with these ideas but find your pace which is in balance with where you are now.  <br>
+q) SEEK out adversity, whatever you are afraid of you must do, IT IS A RUSH!!!  <br>
+And then and only then, will the world give up its rewards and fruits to you!  <br><br>
+
+
+In what area of your life (health, wealth, love, happiness) have you become the weakest?  <br>
+What is a simple practical step that you can do slowly to rewire your brain, be specific.  <br>
+Nations are born stoic and die epicurean.  Think of happiness as the balanced life.  <br><br><br>
+
+
+That strong mother doesn't tell her cub, Son, stay weak so the wolves can get you.  <br>
+She says, Toughen up, this is reality we are living in.  <br>
+Lauryn Hill <br><br>
+
+14.  Hi Nick, are you getting excellent at knowing when it is better to follow your logic than your instincts?  <br>
+a) The impulses (instincts) that have served you in the past have been passed down to you from tens of thousands <br>
+of generations ago.  That which had worked for your ancestors, and has been passed on down to you over time, <br>
+may not work so well today because the world has changed.  Our instincts tell us that when you find sugar or <br>
+carbs you should eat as much as you can because there may be no food around tomorrow.  And so those instincts <br>
+"kick us now" in the modern world as food is everywhere.  You need to engage your logic and wisdom.  <br>
+You should know by now that sugar and carbs make you fat, diabetic, depressed etc.  <br>
+b) Problems with sleeping are also connected to your instincts.  We did not evolve in a world where there were a lot of <br>
+lights on all the time.  The sun was it...  <br>
+So in the modern world we sometimes stay up to late and then we get all sorts of problems regarding <br>
+sleep disorders.  We also did not evolve in a world where it was perfectly quite when we were falling asleep.  <br>
+That also causes a problem going to sleep.  You may want to experiment with white noise as mentioned earlier in this book.  <br>
+c) Your instincts also serve a purpose, you're in the cross walk walking across the street and you hear a high powered engine <br>
+zooming and you naturally get out of the way as fast as possible.  <br>
+Well all of the above is pretty obvious if you have been paying attention to the discoveries of science, so stop killing yourself <br>
+and make the correct decisions.  Why would you want to have all the above problems?  Are you a victim of your own making playing <br>
+out the role of learned helplessness?  Are you a dog in shock box, with the lid taken off?  <br>
+Time to jump to greater heights and get what you really want in life (health, wealth, love, happiness).  <br>
+Fear is just a four letter word???  Reverse psychology.  <br>
+d) Eat drink and be merry for tomorrow we die, no we don't die (this is the modern world), <br>
+save your money for the future instead of spending it as soon as you get it.  <br>
+There may be dark days ahead and you will still be here, so some preparation is paramount.  <br>
+e) Develop strategies to avoid things that are bad for you, don't stock your kitchen with sugar and carbs for example.  <br>
+f) When it comes to love (romance, family, friends) it has been shown that we are far happier when we associate with others.  <br>
+Make plans to meet people instead of making plans to do drugs.  Get rid of the friends who do drugs, they will only bring you down <br>
+in the long run.  <br>
+Don't do down!  It's a drag.  <br>
+g) Revive old friendships with the good people from your past. <br>
+Find people who are helping others and join them, make those types of people your friends (NO DRUG DEALERS/GANGS).  <br>
+h) Do you want the good life?  Use your logic to master your instincts!  <br>
+You control the dog, the dog does not control you!<br><br>
+
+In what area of your life (health, wealth, love, happiness) are your instincts not working in your favour?  <br>
+What can you do to change that?  Write it down and be specific!  <br><br><br>
+
+
+Mathematics as an expression of the human mind reflects the active will, <br>
+the contemplative reason, and the desire for aesthetic perfection.  <br>
+Its basic elements are logic and intuition, analysis and construction, <br>
+generality and individuality.  <br>
+Richard Courant<br><br>
+
+
+
+15.  Hi Nick, how's it going?  Do you know what you're doing with your life?  <br>
+Can you sum it up in one simple sentence?  <br>
+a) What is your one main strength and are you combining it with your destiny plan? <br>
+Sum it up in one simple sentence!  <br>
+b) Don't forget we are competing with 7 billion people; we don't really have as <br>
+many choices as we think, so be realistic with your plan.<br>
+c) Make a plan that energizes, YOU.  You must be tap dancing your way to work.  <br><br>
+
+d) Where is the focus of the 4 things that combine to make your specific strength/destiny?  <br>
+d1) Who did you grow up around?  What were they like and in what positive ways did they influence you?  <br>
+Even if they were the meanest people in the world there is always some good in everyone.  <br>
+You may have to search hard to find it but it is there, in you!  Search yourself (if necessary) to find 'their self'.  <br>
+d2) What type of feedback have you had from strangers in your life?  What positive things did they say to you?  <br>
+d3) What have you been doing for the past 10 years or what did you want to be when you were 14 years old?  <br>
+That is a big part of you.  <br>
+d4) What can you talk about effortlessly?  <br>
+Where do the above 4 things intersect, that is your unique strength!  <br><br>
+
+e) Find your health strength/destiny, your wealth strength/destiny, your love strength/destiny and your happiness strength/destiny.  <br>
+f) Finding your strength/destiny will cause self fulfilment.<br><br>
+
+Start with this one:  What is your one sentence simple business plan?<br>
+Then once you have that down, do a simple sentence about the others (health, love, happiness).<br><br><br>
+
+
+Clouds come floating into my life, <br>
+no longer to carry rain or usher storm, <br>
+but to add color to my sunset sky.  <br>
+Rabindranath Tagore <br><br>
+
+Do not dwell in the past, do not dream of the future, <br>
+concentrate the mind on the present moment.  <br>
+Buddha <br><br>
+
+16.  Hi Nick, are you setting up your life so your work is your vacation?  <br>
+a) A life where the end game "is the vacation" isn't a life.  <br>
+b) Your life, is your work, although you may need some down time now and then. <br>
+Your down time can be a ritual; perhaps on a Saturday or Sunday you work a little bit less and go to a movie.  <br>
+c) Never let a dichotomy rule your life, a dichotomy in which you hate what you do, so you can have pleasure in your spare time.  <br>
+That is a nightmare; look for work that will give you as much pleasure as your spare time!  <br>
+d) If you have a job that you need a vacation from, then never come back.  <br>
+e) A life built 'around' vacation is really no life at all.  <br>
+f) Now some people say that you should do what you love, but this can also lead to problems.  <br>
+Never do what you love, because the second you do it for work you may find that you don't love it anymore.  <br>
+The repetition might kill the love.  <br>
+You should do what you like!  <br>
+Don't be chasing the mirage, what do I love, what do I love...  <br>
+g) You need to balance what you do, maybe a bit of love, but you must have a whole bunch of 'I like it a lot'.  <br>
+Just like in marriage the lust part of the love wares off over a period of time and you are left with a lesser version of the love.  <br>
+Although books have been written on how to keep that going as well, but that is beyond the scope of this book.  <br>
+You must have a like ability factor for your job which is integrated with all aspects of who you are.  <br>
+i) Having said all this it may be that you should do what you love.  Is your job integrated with all of your 'strength/destinies' <br>
+as discussed in question 15 above.  The devils in the details, it all depends on who you are.  <br>
+Know thyself and happiness will appear instantly (once you master your demons)!  <br>
+j) It's all about the ebb and flow of the daily cycle, everyday should have some vacation in it.  <br>
+But don't make the mistake of using drugs or junk food etc as part of the vacation, all drugs guarantee depression!  <br>
+Even sugar and anything made from wheat causes depression!  TO DO - Google "depression from wheat".  <br>
+k) Cat nap, meditate, find what works for you; these things will mellow your mind into a state of power.  <br>
+L) Tap dance your way to work with a twinkle in your eye every day!  <br>
+Now some days are not going to be great but if you aren't tap dancing consistently then it is time to make a change.  <br>
+m)  Missed opportunities are ok, but you don't want to miss the opportunities that jive with YOU!  <br>
+n) Build upon your strengths.  <br>
+o) Evaluate your life in the morning that is when your mind is the strongest.  Stop the caffeine if this is not true for you.  <br>
+Caffeine is a drug, all drugs guarantee depression!  <br><br>
+
+Have you been hating your job and dreaming of your vacation time?  <br>
+Are you in danger of pursuing something you "lust after" as opposed to something you like?  <br>
+If the answer is "yes" to any of the above two questions, write down what you are going to do differently!  <br>
+During the last two months/years have you been popping out of bed and tap dancing your way to work?  <br>
+If not, what will you do to change yourself so that you can eventually become the master?  <br><br>
+
+A vacation is what you take when you can no longer take what you've been taking.  <br>
+Earl Wilson <br><br>
+
+17. Hi Nick, what's new?  Are you taking responsibility for everything that happens in your life?  <br>
+a) It is true that sometimes shit just happens and there is nothing you can do about it.  <br>
+You have the power to change the things that are within your control, <br>
+you have the power to accept the things that you cannot control, <br>
+and you have the wisdom to know the difference between those two types of things.  <br>
+b) Anything bad that happens to you, that you could have prepared for when things where good, is your fault.  <br>
+That is the level of responsibility that you must achieve.  <br>
+c) Prepare, prepare, prepare, you need to bring more tools to the battle if you want to win!  <br>
+If you don't have it in your head, you will have to have it in your heal.  In other words, if you aren't smart enough to prepare <br>
+you will have to take the physical (and mental) pain of life over and over again.  <br>
+d) Optimism is the best but it's ok to have a little pessimism if it helps you prepare for the worst.  <br>
+e) The only thing that is guaranteed is change, you must prepare for the change.  <br>
+f) Check yourself before you wreck yourself and don't get attached to some weird dogma.  <br>
+g) Now don't blame yourself for everything that happens, it's impossible to prepare for everything.  <br>
+You must find the balance between optimism and pessimism.  <br>
+i) Your end game thoughts must be optimistic, and your "now preparation thoughts" should have a little pessimism.  <br>
+j) Don't be a zombie passing through life chasing the mirage.  <br>
+k) We are constantly in "the preparation" for life.  Plant the fields today, have food tomorrow etc.  <br>
+Who wants the pain, do you want to take it in the heal, touch an electric fence?  <br>
+What can I do today to prepare for the biological, personal, social, and economic crises that could occur over the next weak/years?  <br>
+L) You don't have to prepare continuously, but take 30 seconds, at least, now and then.  <br>
+Do not put off until tomorrow that which you can do today!  <br>
+m) The challenges of life should make you happy.  Without challenges life would be boring. <br>
+And when something bad happens to you, don't freak out and beat yourself up, just push it off and say, <br>
+"next time I will do better", and then go and prepare!  <br>
+n) Go to the old age home 4 times a year and talk to the old people.  There is a lot of wisdom there.  <br>
+Read as much as possible, it is a great way to prepare.  <br>
+Be a learning machine!  <br><br>
+
+What is an example from one area of your life (health, wealth, love, happiness) where you have taken it "in the heal"?  <br>
+How could you have prepared to prevent that pain?  Write it down!!!  <br>
+No abdication (failure to fulfill a responsibility or duty), and no fixation on "the bad" that happened, move on, prepare again!  <br><br><br>
+
+
+You cannot escape the responsibility of tomorrow by evading it today.  <br>
+Abraham Lincoln <br><br>
+
+18.  Hi Nick, have you noticed that when you seek for anything, the only thing that remains is the truth?  <br>
+a) I think therefore I am.  <br>
+Thought experiment - Remove everything that you could possibly doubt, what would be left?  <br>
+The only thing that would be left is truth, math, love and change.  <br>
+Let's just boil it all down to math.  <br>
+Don't get scared, we are not going to learn calculus here lol.  <br>
+Why are we discussing this.  Example - if you want to master the wealth part of life you are going to need to know the basics <br>
+of math and the language of money (definitions for that language can be found in books, of course).  <br>
+b) You must be able to quantify things to make decisions that match up with what you are trying to get.  <br>
+c) Take your diet, how many calories are you allowed to eat if you are trying to lose weight.  Math...<br>
+d) Math doesn't have to be hard; it can tell you a lot.  <br>
+e) Let's be practical, what are the odds of getting what you want, should you make the decision or should <br>
+you stay where you are?  Get out your calculator out and estimate the math!  <br>
+Should I keep this friend, what are the pluses and the minuses?  <br>
+f) Should I start a new business because it will make me happier or should I stay with my current job  <br>
+because it is a guaranteed income?  What are the odds of the new business being successful vs the odds of it failing?  <br>
+What is the dollar/happiness reward ratio for the new business vs the dollar/happiness ratio for my current stable job?  <br>
+g) Should I take a chance on love or is this person too unstable?  <br>
+Get out your calculator and try to estimate the odds (math).  <br>
+Do you want the good life?  Are you the type who doesn't push himself?  <br>
+Are you just going to give up and <br>
+say , "but I'm no good at math"?  <br>
+Do you make excuses not to do what is necessary for success in any aspect of your life?  <br>
+h)  Many things in life will be wrong but one plus one always equals 2.  <br>
+i) If life wasn't difficult it would be boring.  Do the hardest positive thing you can think of and make it a hobby!  <br>
+You will be amazed at what you can accomplish, it will become easier as you get better at it; practice, practice practice!
+Go play some poker or other games of chance which increase you math/logic circuits.  <br>
+These ideas will help to rewire your brain so that health, wealth, love and happiness increase tenfold.  <br>
+The phrase 'tenfold' is math.  Even if you don't like math, you are using it every day anyway, so you see, <br>
+you are good at math!!!  This idea of using math is just a new mind set, don't get obsessed with it.  <br><br>
+
+Write down a big decision that you are contemplating and attempt to quantify it <br>
+(figure out the odds of success/failure, happy outcome vs sad outcome, value vs cost).  <br>
+Get out your calculator and attempt to take the direct path to success!  <br><br><br>
+
+
+"Everything passes, only truth remains."  <br>
+Fyodor Dostoyevsky, The Brothers Karamazov <br><br>
+
+A lion of truth never assumes anything without validity.  <br>
+Assumptions are quick exits for lazy minds that like to graze out in the fields without bother.  <br>
+Suzy Kassem <br><br>
+
+19.  Hi Nick, are you becoming awesome at embracing controversy?  <br>
+a) You must become a well-rounded person to be successful in life and mastering controversy is one <br>
+of those challenges that you must excel at to succeed.  <br>
+b) Attempt to look at all sides of the story, don't just blindly follow what everyone else is following.  <br>
+c) The people in the background who run society are all well-educated and have many experiences, they are <br>
+well rounded.  <br>
+Language, art, history, music, sports, etc, you must bring it all together and make it a part of you if you want to go to the top.  <br>
+That doesn't mean you have to spend your entire life locked away studying, but take some time <br>
+to look at everything you can at least once in life.  <br>
+And then study your ass off on that which interests you the most, and if your interests change over time then study that as well.  <br>
+You can always come back to what you were studying before.  And read the best stuff, it will influence you in a positive direction!  <br>
+d) And once you have gained enough experience from studying go out into the world and take action.  <br>
+Focus, and "make what you want" happen!  <br>
+e) A bad chef with many ingredients in the kitchen will cook a better meal than <br>
+the best chef in the world who only has one ingredient in the kitchen.  <br>
+f) Even if you are the smartest person in the world, it is still easier/faster to learn from others than it is to think it up yourself.  <br>
+g) You must enhance your sense of perspective; this requires studying a little bit of history.  <br>
+Where did you come from?  How are your current thoughts influenced by what has happened in not only "your recent past" but the past <br>
+of others from 6000 years ago!!!  The psychological download pattern that is "in you" has been handed down <br>
+since 2 million years ago; or longer, if you want to talk about instincts.  <br>
+h) Gain insight with these ideas, don't just be a cog in the machine who has far too few choices.  <br>
+i) Being a well-rounded person will also make you a more interesting person.  Other successful people will be attracted to you <br>
+and they will want to work with you.  <br>
+Who you know is very important in getting ahead.  <br>
+It's not "what you know, it's who you know" has a lot of truth to it <br>
+but in order to attract those successful giants, who's shoulders you will need to stand on, <br>
+you must be interesting and knowledgeable and well-rounded.  <br>
+j) You don't want to be a "Jack of all trades" but look at everything, "focus" on an exponential curve ie spend the most time <br>
+on that which interests you the most and less time on things that don't interest you so much.  <br>
+History should get at least a medium amount of your time.  You must study the great ones from the past; those who have done something similar to
+what you want to do!  <br>
+L) Putting all the above ideas together may cause controversy, you must embrace the controversy, it will create new/original ideas in you!  <br><br>
+
+What are you the weakest on:  language, art, history, music, sports, politics etc.  <br>
+Commit yourself to learning both sides of the story; controversy.  <br>
+Write down a solution to get better at the one thing that you are the weakest on.  <br>
+What is your resolution?  Now go do it!  <br><br><br>
+
+
+"People say graffiti is ugly, irresponsible and childish...  <br>
+but that's only if it's done properly."  <br>
+Banksy <br><br>
+
+20.   Hi Nick, what is the biggest story of your time, how real is it?  <br>
+a) Here's a story:  Some people say that if you are hyper organized you only have to work 4 hours a week!  <br>
+Is it possible to outsource everything?  No, you must still spend many hours organising the direction of
+that which you have out sourced; therefore the 14 hour work day is still necessary in order to have an advantage over your competition.  <br>
+If all your competitors are working just 8 hours a day then just think of how far ahead of them you will be.  <br>
+Now some days you will want to work less, that's ok, you don't have to become a workaholic but since what we do is what defines us...  <br>
+You are what you do!  If you do nothing then you are nothing, <br>
+if you help others, then you are a good Samaritan and you will be fulfilled. <br>
+You can't outsource everything anyway, you have an unique talent that only you can bring to the table; and you must "bring it"!  <br>
+b) We are the most fulfilled when we are helping others.  <br>
+Take a few minutes to contemplate that last sentence and you will feel its truth.  <br>
+c) You must love the daily flow of your endeavours.  If you don't, then you are doing something wrong and maybe it's time for a change.  <br>
+You're not going to tap dance to work every day, some moments of your life will definitely challenge your happiness, those are
+the days when you will have to "tough it out".  <br>
+d) Put forth your best efforts and you will reap the rewards; and in the process bring "great benefit" to others.  <br>
+e) If you only worked 4 hours a week you would eventually become bored and you would find yourself in a bad state.  <br>
+Even if you just do art 8 hours a day, you are helping others and that could be your work.  <br>
+You must train yourself to love your work.  <br>
+It's as simple as just having your first thought when you wake up be "YES, I get to do _____ and _____ and _____all day, COOL!"  Fill in
+those blanks!  Get excited about that which you will accomplish TODAY!!!  <br>
+f) When you are 80 years old you will wish you were young again so that you could have the energy to work 8 hours or more a day.  YOU
+need to do what you can today, you to need to focus, you need to help others, you need to 'accomplish' to acquire fulfilment.  <br>
+g) Do you know anyone who has had any impact on the world, who only worked 4 hours a week?  <br>
+h) There are two types of happiness:  Memory happens (things you accomplished in the past) and "in the moment" happiness.  You
+must master both of those and bring them both together today!  <br>
+You can even shrink the idea of "the past" to the last 14 hours you just experienced.  What did I accomplish today?  Think about what you
+accomplished during the day as you fall asleep at night, it is a very rewarding feeling and will influence your dreams.  <br>
+You will start to solve complex problems that you had during the day while you sleep.  That is a definite advantage.  <br>
+'In the moment happiness' is acquired by liking the work that you are currently doing.  Learn to love the grind, focus in a relaxed way as you
+go through your day.  Earn the respect of your peers!  <br>
+i) Some contrast is ok, once a week do something completely different from your daily grind.  <br>
+j) Are you on the right track?  If so, then tell me how you can spend even more than 40 hours a week on that track!
+And if you can find a way to do that then your "in the moment happiness" will be even greater!  <br>
+k) Don't forget to keep everything in balance.  <br><br>
+
+In which of the four areas of your life (health, wealth, love, happiness) have you been looking for the short cut.
+What is the simple solution to fix that behaviour?  <br><br><br>
+
+
+The price of success is hard work, dedication to the job at hand, <br>
+and the determination that whether we win or lose, <br>
+we have applied the best of ourselves to the task at hand.  <br>
+Vince Lombardi <br><br>
+
+21.  Hi Nick, did you know that it is "genius" to simplify anything?  <br>
+a) Try to make something that is really difficult, easy.  <br>
+Make your problem your strength.  <br>
+b) Contrast - compared to putting a man on the moon, everything is easy.  You must innovate your way out of
+your problem.  <br>
+c)  Break your problem down into ever smaller chunks and then work on the smallest chunk you end up with.  <br>
+To make it even easier, contrast that small chunk with something that is super difficult (putting a man on the moon).  <br>
+There are two types of people in the world, those who conquer fear and those who suffer and die from it.
+Don't let your fear stop you from solving that super small chunk (problem).  <br>
+d) Look for other people who have solved the problem you are trying to solve and follow them.  <br>
+If they can do it, you can do it!  <br>
+Look for the biggest people you can find, go to the top, read their books, watch their videos etc.  <br>
+e) Find the largest contrast related to your problem and use it to condition your mind into the positive state,
+"You know what, I can do this!", and do not follow people who are weak.  <br>
+Keep in mind that a weak person has the ability to become a strong person and it can happen in an instance;
+but look for consistency after they make the jump.  <br>
+Remain observant of all the people in your circle and look for those who are on their way up.  <br>
+Expand your circle quickly, go to the top!  <br>
+f)  Don't let your contrast work against you.  Let's say you solve your money problem, "I want a million dollars";
+then the next thing you know you are looking at someone who has $10 million and now you say to yourself
+"I wish I had $10 million, owe, I'm sad again..."  Once you solve your problem, enjoy the accomplishment for a while.
+Don't let your natural survival greed cause you to contrast your way into creating problems automatically.  Sure your
+next goal is just around the corner but now is the time to stop and smell the roses for a bit.  Don't smell the roses for
+to long though, you might get stung by a bee!  <br>
+g) Use this idea of contrast bias to manipulate your mind and keep the simple things simple.  Forget to worry if you are stressed out.  <br>
+"I am forgetting to worry, I am forgetting to worry.  Love, love, love love...repeat slowly, then slower and slower repeat, until
+you are saying it so slowly you are falling asleep."  <br>
+Say to yourself "how will I think about this stress situation 10 years from now?  Will I laugh at myself for being so worried about it...
+Will the worrying help me solve the problem?"  <br>
+No, of course not.  <br>
+Don't avoid the problem but laugh at yourself now, "I'm worrying about something small again.  <br>
+If you are so stressed out that you can't sleep then you better get professional help immediately.  <br>
+h)  Now, just because you have broken your problem down into small chunks doesn't mean those small chunks will automatically
+be easy to solve.  It can still be hard to solve them but a least you can focus all your powers like a laser beam
+and cut that huge problem down to size.  Then focus your laser beam on one sub problem.  <br>
+That is how you advance quickly.  Find the sub problems, and then work on the one
+that needs to be solved first.  Find the order of the sub problems.  If I solve sub problem A first then sub problem B will be easier to solve.  <br>
+Continue that logic until all the sub problems are solved; and low and behold, your goal has been accomplished.  <br>
+Time to smell the roses, YEA!  And I like my work!  I am tap dancing!  <br>
+Google - Singing In The Rain.  <br>
+i)  Think of many contrasts that can help you.  Example:  If you are on welfare and live in the first world, then think about the
+people who live in the third world and imagine their daily grind compared to yours.  How does that make you feel?  <br>
+Write down 11 contrasts related to the other situations of YOUR current life!  <br><br>
+
+What creates fear in you, pick something specific?  Now, who is the top person that you can think of (it can be anyone on the planet)
+that has conquered that fear and contrast "yourself" with that person.  <br>
+What specifically in your life is super simple that you are spending way too much time on (picking out your clothes for the day etc)?
+Write down specifically what you will do so you are not wasting time on that.  <br>
+What is the one thing in your life that you have over simplified and explain what additional work (sub problems) you will need to do in order to
+acquire that goal!  <br><br><br>
+
+
+Talent hits a target no one else can hit;  <br>
+Genius hits a target no one else can see.  <br>
+Arthur Schopenhauer <br><br>
+
+22.  Hi Nick, are you investing in your mind?  <br>
+a) Every day/week/month you should take some time keeping track of "your time" and any other books/accounts/expenses
+and "To Do Lists" that you have created to maximize your organization.  <br>
+b) You must keep an account of your emotional/financial etc life as well as the information you are putting in your brain every day.  <br>
+c) Your Mind - Garbage in, garbage out.  Beneficial information in, positive actions out!  <br>
+Sounds simple and it is, if you do it and track it.  Make a conscious effort to succeed starting with your own thoughts.  <br>
+Your moment by moment thought must be about what you are putting into your mind and what, "what am I thinking about?"  <br>
+Control that and you will be winning the "War Of Life"!  And it is a war.  There are 7 billion people on the planet and
+we are all competing for what we want, make no mistake about it.  Even the Buddhist monks have desires.  If a monk desires
+to have no desires, then a monk desires, to have no desires...  <br>
+So desires are ok but you must have good desires which help you help others and you must control the way you feel about your desires.  <br>
+Don't get all bent out of shape (angry/frustrated) because your goals aren't happening as quickly as you thought they would.  <br>
+d) Every time you start to feel frustrated use that feeling to trigger a physical response in yourself automatically.
+Here is what you do to learn this type of control:  <br>
+The moment you start to feel frustrated you start a slow 10 deep breath breathing cycle.  Breath slowly so you don't get light headed.  <br>
+After you finish the 10 deep breaths close your eyes for 30 seconds and empty your mind of all thoughts (think about nothing).
+Then re-engage your focus back on the task at hand, with this relaxed feeling, or take a break.  You may be hungry or a bit
+tired or in need of asking a significant other a question; take appropriate action.  <br>
+You can think of variations or improvements of the above pattern to maximize its potential for you.  <br>
+e) Do not major in minor issues and do not minor in major issues.  Keep track of the big picture and the longest term goal.  What are
+the sub goals to accomplish long term happiness?  <br>
+Keeping track of what your investment in your mind is, is the smallest sub goal of all, track it like an eagle and invest in it
+like the billionaire Warren Buffet!  <br>
+f) Take 30% of your discretionary income and invest it in your brain!  <br>
+If you are completely broke, get a library card.  <br>
+By those books, take those courses, plan a trip to visit your mentor.  Double down on your skills, whatever it takes, do it!  <br>
+g) Your brain is a kitchen, the kitchen of life, fill your kitchen with many raw ingredients so you can create the best for you.  <br>
+To cook up an amazing life for yourself you will need tons of ingredients.  <br>
+Once you have many ingredients sit in a dark room, close your eyes, and you will come up with great ideas.  And if you don't
+have any great ideas at that time then think of the great ideas of others and improve upon them.  Build a better mouse trap as they
+say.  <br>
+h) Blend the ingredients of different art forms.  Example:  <br>
+blend painting and finance with music...  <br>
+The possibilities are endless!  Create your own unique soup.  <br>
+i) The truth/happiness is in the middle.  Money can bring you happiness or it can bring you sadness.  As you invest in your mind
+you will eventually become richer both spiritually and monetarily.  You must use your new powers for good otherwise you will
+self-destruct.  If you get to the top of success mountain by yourself there is a good chance you will jump off the cliff.  <br>
+Now if you have friends who are into cliff jumping then this is ok, but if you do not then you probably won't have a
+parachute on.  Prepare, prepare, prepare, invest in your mind first, all actions start with thoughts.  <br>
+j) Here is the order of reality:
+Thoughts, Feelings, Actions...  in that order!  That is the physics of nature applied to human consciousness.  That is how it is!  <br>
+Make no mistake about it, if you are in control of your thoughts you are in control of your feelings, if you are in
+control of your feelings, YOU ARE IN CONTROL OF YOUR ACTIONS!!!  This is a law of nature.  <br>
+Have you ever done some stupid action and then asked yourself, "I don't know why I did that?"  Many actions are done at the
+unconscious level if we are not monitoring our thoughts at that time.  <br>
+t h o u g h t s<span style="word-spacing:0.60em"> </span>   f e e l i n g s<span style="word-spacing:0.60em"> </span>   a c t i o n s  <br>
+k)  Do not invest in things that rust, rot or depreciate; invest in your mind first and foremost!  <br>
+You need to be worth more later so invest in yourself first.  <br>
+L) If you have a little bit of money send your mentor a gift, what you give will come back to you and may come back
+as very important information for your brain, invest in your mind!  <br><br>
+
+How are you going to invest in your mind?  Double down!  Write down the plan (library, courses, books, seminars etc).  <br><br><br>
+
+
+"Wealth consists not in having great possessions, but in having few wants."
+Epictetus <br><br>
+
+23.  Hi Nick, is everything going good these days?  Are you re-making the world in your own image?  <br>
+a) Take your world and re-imagine it, re-invent it,  take it apart and put it back together again in different orders,
+and perhaps do it in ways that it has never been done by anybody ever before.  <br>
+b) What are the most bizarre comparisons you can make with yourself?  Can you imagine yourself being, Bill Gates,
+Mother Theresa, Walt Disney, Bill Clinton, Snoop Dogg.  <br>
+c) What is the picture in your mind that your life is going to look like?  <br>
+What is your outlook on life?  Are you innovating your way out of your problems and into the ultimate vision,
+that you have, of your future?   <br>
+Don't be a victim, remember there are 3 types of people:  <br>
+Those who watch things happen.  <br>
+Those who wonder what happened.  <br>
+And those who make things happen.  <br>
+Engage your optimism to the maximum if you are feeling like, "But what if nothing comes of my efforts?"  <br>
+Then do some physical exercise to wake/relax your brain up and re-energize your motivation.  <br>
+d) Take what you really like doing (healthy choices only that are good for you and others) and think of a way to make money at it.  <br>
+No matter what it is, there is a way, innovate.  <br>
+e) Experiment, every failure is a learning experience that gets you closer to your goal.  <br>
+f) Start by watching things happen and then learn how to make things happen.  Don't be in that category of wondering what happened.  <br>
+g) Try this mental exercise:  <br>
+If you were independently wealthy and you had finished doing all the normal things like travelling and buying all those material
+items that you want, THEN WHAT would you do?  <br>
+You would probably do the things that you are doing in your spare time right now.  Now I am not talking about you being a trillionaire
+and having all the money in the world.  "Owe, I'm going to solve the world hunger problem overnight".  No, I mean if you had like say
+$50 million.  What are the things that you are doing in your spare time right now.  How can you use those things you like doing to innovate
+your way into your ultimate, happy imagined life?  <br>
+What would you change in your day?  <br>
+What is it in terms of your goal that moves you forward in terms of motivation?  <br>
+Who is around you, are you surrounded by family, are you surrounded by professional people?  <br>
+Do you see yourself in a corporate environment, home office or at the beach etc, what is it that moves you towards your goal?  <br>
+That is the world that you need to define very specifically, today!  <br>
+Do small dreams motivate you?  <br>
+Imagine yourself being able to do whatever you want to do, dream big!  <br>
+Then balance your large dream with what you observe in reality.  Search for the path and when you see it, go for it!  <br>
+There will be failures (learning experiences) along the way but that is part of the adventure/fun!  <br>
+h)  When you look at your life, who would you most want to be around (anyone you want)?  Think big.
+What tools would you like to have?  What art forms would you like to master? etc.  Define your dream then reverse engineer
+the path that will get you there.  What are the sub steps?  Start from the dream and work backwards.  <br>
+j)  Don't chase a dream that doesn't match up with your natural skill set.  If you don't know what your natural skill set is
+then take some of those tests online that will point you in the right direction.  Google - "my natural skill set".  And see
+number 12 above.  <br>
+k)  The people who start the businesses and run the world all have an entrepreneurial spirit, develop this spirit and those
+people will be attracted to you and then they will like you, and then they will hire you (if you need a job)
+or loan you money.  <br>
+L) You are allowed two big picture goals:  <br>
+One is the humanitarian goal and the other is the selfish goal.  So help people first and then buy your paradise island second.  <br>
+You actually need to do those goals in that order.  Obviously!  <br>
+m) Never mind money for a bit.  What would your best world look like health (food exercise) wise?  <br>
+What would your best world look like love (friends family romance) wise?  Are you an extrovert or an introvert (somewhere in the middle),
+build your social life around
+the type of person you are.  <br>
+What would your best world look like happiness (things you like to do balanced out correctly) wise.  <br>
+How would you balance everything for complete self fulfilment?  <br>
+What would you do in the morning, afternoon, evening?  <br>
+n) Now think of the inverse.  What are all the things that you want to remove from your life?  How will you do that, when will you start?  <br>
+o) Now wealth, what does your world look like imagination wise on a day to day basis?  How will you generate wealth?  How rich
+do you have to be to be happy.  Is a small apartment great enough or do you want more?  Be specific with what you want, keep
+it in your mind's eye at all times!  Be realistic with regards to your current/potential skill set, and match your skills
+with what you like to do in your spare time (that is where you will make your money).  <br>
+Remember - Your thoughts create your feelings and your feelings create your actions.  What you concentrate on during the day
+you will dream about at night.  Have great dreams, learn to fly in your dreams it ROCKS!  <br>
+p)  At least live your life with intention.  If you want to be an entrepreneur but your current circumstances dictate that you need more money
+then continue working hard at your job for a year and save up that money!  <br>
+q)  Concentrate the most on your social life (personality) first, everything else will hinge off of that.  The people you hang out
+with are "the people" you will "become"!  <br><br>
+
+Use your imagination:  <br>
+What will your future world look like health wise?  <br>
+Where is your income going to come from in your ideal world?  Reverse engineer that!  <br>
+Socially what is your ideal situation/s?  <br>
+How are you going to get happy, you will need charity, culture, art, music
+spirituality, and even a little bit of greed etc, balance everything out.  <br>
+Define all of the above, be specific, write the answers down, cut some things out, add some new things in,
+you can have anything you want but not everything.  <br>
+Life is like a parachute jump, you only get one chance, and will you fall to your death quickly because you didn't pack your parachute
+or will you feel the gentle warm breeze brush gently across your face as you glide through your ideal life of joy.  <br>
+The most powerful word in the world is "IMAGINE"!  <br>
+Make it happen now!  <br><br><br>
+
+
+"In a time of destruction, create something."  <br>
+Maxine Hong Kingston <br><br>
+
+awareness, <br>
+feel the fear and do it anyway!  <br><br>
+
+BALANCE ALL!!! <br><br><br><br><br><br>
+
+
+
+
+Congratulations you have just finished the first <br>
+half of "Motiviate Anyone...".  <br>
+Please <a style="margin-left:0px;" href="https://www.thehyperDream.com/myDream/books/#now">purchase the second half ($19) </a>to increase your maximum <br>
+potential and acquire the good life!  Not to mention helping <br>
+to support this web site and the authors endeavours to <br>
+create more works of art, literature and music  :-)   <br><br>
+
+<p id='now'>
+LIMITED TIME OFFER:  <br>
+The second half of this book is currently free if <br>
+you purchase a piece of <a style="margin-left:0px;" href="https://www.thehyperDream.com/myDream/artForSale/">art</a>  <br><br><br><br><br>
+</p>
+
+
+<!--
+This book would not have been possible without help from <a style="margin-left:0px;" href="http://www.TaiLopez.com">Tai Lopez</a><br><br>
+-->
+
+<p style='font-size:1em;'>
+
+Hi Nick, when are you going to help other drug addicts quit drugs?  <br><br>
+
+Hi Nick, when are you going to help other poor people become rich?  <br><br>
+
+Hi Nick, when are you going to help other violent people become peaceful?  <br><br>
+
+Love will work on Planet Earth!  <br><br><br>
+
+
+Thesis, antitheses and the synthesis of those produces balance and success.  <br>
+David H Potschka  <br><br>
+
+Forgiveness is easier, safer, enlightening and more profitable than revenge.  <br>
+David H Potschka <br><br>
+
+"They are angry with me, because I know what I am."  Said the little eagle.  <br>
+"How do you know that they are angry with you?"  <br>
+"Because, they despise me for wanting to soar, <br>
+they only want me to peck at the dirt, <br>
+looking for ants, with them. But I can't do that.  <br>
+I don't have chicken feet, I have eagle wings."  <br>
+"And what is so wrong with having eagle wings and no chicken feet?"  <br>
+Asked the old owl. "I'm not sure, that's what I'm trying to find out."  <br>
+"They hate you because you know that you are an eagle <br>
+and they want you to think you are a chicken <br>
+so that you will peck at the ground looking for ants and worms, <br>
+so that you will never know that you are an eagle <br>
+and always think yourself a chicken. Let them hate you, <br>
+they will always be chickens, and you will always be an eagle.  <br>
+You must fly. You must soar." Said the old owl.  <br>
+C. JoyBell C.  <br><br><br><br>
+
+
+
+NOW  AVAILABLE<br><br>
+
+You may also be interested in two other books I wrote:  <br><br>
+
+"INTERNET MONEY, How to Make Money with the Internet." <br><br>
+
+And my third book: <br><br>
+
+"The Solution For the Stock Market".  A different topic all together <br>
+but once you have mastered your emotions <br>
+after reading "Motivate Anyone", well, then what?  <br>
+Time to get into the big dream and fight some more battles.  <br>
+My stock market book teaches you the language of money and contains over 400 rules <br>
+that you need to know too master the 5 asset classes and make the really
+big dollars!!!  <br>
+Onward and upward, where is the next war!  <br><br>
+<br>
+Just buy <a style="margin-left:0px;" href="https://www.thehyperDream.com/myDream/artForSale/">one of my works of art</a> and I will send you the above <br>
+two books for FREE!<br><br>
+
+Cheers,<br><br>
+
+Dave<br><br><br>
+<!--
+Limited time offer, get the internet marketing book for free when you purchase
+the stock market book for the low price of $19!  <br>
+See the <a style="margin-left:0px;" href="https://www.thehyperdream.com/stocks/">table of contents </a>for free.  <br><br>
+-->
+
+</p>
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+
+		</footer>
+
+<!-- My scroll buttons.  -->
+		<div id="clicker">
+     		^
+		</div>
+
+
+<!-- These don't work on the ipad but the javascript needs them as stubs or it can't find
+them and causes an error, and I don't want to alter the javascript scrollButtons.js
+I think the id's have been commented out in the "style".
+-->
+
+        <div id="floatieUp">
+
+		</div>
+
+		<div id="floatieDn">
+
+		</div>
+
+<script type="text/javascript" src="/static/myDream/js/scrollButtons.js"></script>
+
+
+<!-- These don't work on the ipad
+
+		<div id="floatieUp">
+     		u
+		</div>
+
+		<div id="floatieDn">
+	    	d
+		</div>
+-->
+
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+
+    </body>
+
+
+
+</html>

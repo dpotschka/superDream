@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+{% load static %}
+    <head>
+
+
+    <title>Your Dream Page</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <meta name="description" content="Stock Market Solution and builder of your website!">
+    <meta name="keywords" content="the hyper Dream, theHyperDream.com, stock market solution,
+    Stock Market Solution, builder of your website, dream, motivate, love, faith, hope, health, wealth,
+    happiness, ideas, great ideas">
+
+    <meta name="author" content="David H Potschka">
+
+    <meta property="og:title" content="Your Dream Page"/>
+    <meta property="og:description" content="Stock Market Solution and builder of your website!" />
+    <meta property="og:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta property="og:url" content="https://www.thehyperdream.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="243074516150509" />
+
+<!-- fuck you bitch -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Your Dream Page" />
+    <meta name="twitter:description" content="Stock Market Solution and builder of your website!" />
+    <meta name="twitter:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta name="twitter:url" content="https://www.thehyperdream.com/" />
+
+    <link rel="shortcut icon" href="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/static/myDream/webImages/LogoF240x240.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+
+<!--
+Davee These icons are in your c:  .../theHyperDream/icons directory. upload them to paw.
+I have not saved them to f: yet or g: etc.
+Some of the images are not listed below.
+
+I made them here:
+http://www.favicon-generator.org/
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+-->
+
+
+		<style>
+
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+
+			 #mobile {position:relative;}
+			}
+
+
+            .flex-container {
+                display: -webkit-flex;
+                display: flex;
+                height:124px;
+                }
+
+
+
+            .flex-item1 {
+                width: 30%;
+                height: 100%;
+
+            }
+
+            .flex-item2 {
+                width: 70%;
+                height: 10%;
+
+            }
+
+
+/*
+#boxshadow {
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+}
+*/
+
+
+/* Make the image fit the box
+#boxshadow img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+}
+*/
+
+/*
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    left: 15%;
+    height: 100px;
+    bottom: 0;
+}
+*/
+
+
+li {
+    margin-bottom: 15px;
+}
+li a {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+
+    color: red; /*#333;*/
+    text-decoration: none;
+    border-bottom: 1px #333 dotted;
+    background-image: linear-gradient(to right,    /* horizontal shift */
+                                      #CCFF33,     /* color at 0% */
+                                      #CCFF33 50%,
+                                      transparent 50%,
+                                      transparent);   /* color at 100%  */
+    background-position: 100% 0;  /* x, y    100% of the background-size.  */
+    background-size: 200% 100%;   /* double the horizontal size. */
+    transition: all .2s ease-in; /* change 'all' to background-image, causes different effect. */
+}
+li a:hover {
+    color: #006600;
+    border-bottom: 1px #006600 dotted;
+    background-position: 0 0;   /* resetting the background-position to 0%, moves our image right. */
+}
+
+
+/* To get the video to play in the background, I put this after the flex stuff I think that helps?  */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-width:99%;
+}
+
+.contentFixed {
+  position: fixed;
+  top: 0;
+ /* background: rgba(0, 0, 0, 0.5);  */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 2%;
+}
+
+.contentRelative {
+  position: relative;
+  top: 0;
+ /* background: rgba(0, 0, 0, 0.5);  */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 0.1%;
+}
+
+/* For my twitter button */
+
+.twitterRelative {
+  position: relative;
+  top: 0;
+  background: rgba(61, 104, 182, 1);
+  color: #f1f1f1;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  padding:3px;
+  margin-left:1%;
+}
+
+
+/* End To get the video to play in the background  */
+
+
+		</style>
+
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code  -->
+
+
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-DUT_AXqkTpLQg"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-DUT_AXqkTpLQg.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+    </head>
+
+
+
+	<body>
+
+
+<!--
+https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/static/myDream/builderImages/star.mp4" type="video/mp4
+-->
+
+<video autoplay muted loop id="myVideo" poster="/static/myDream/builderImages/starLast-327.png">
+  <source src="/static/myDream/builderImages/star.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+
+<!-- Part 1 of 2 for the fb button.  -->
+<div id="fb-root"></div>
+
+<script>
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+
+            if (d.getElementById(id)) return;
+
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+
+<!--
+<body style="background-image:url(bgimage.jpg)">
+style="background-image:url(/static/myDream/webImages/asses.jpg); background-repeat:no-repeat; background-size: 100% 100%;">
+style='width:70.65%; height:90%;'
+
+        <span class="flex-item1">
+        <a href="{{myVars.logoPath}}">{{myVars.logoWords | safe}}</a>
+        </span>
+
+        <span class="flex-item2">
+        <img src="{% static '/myDream/webImages/asses.jpg' %}">
+        </span>
+
+-->
+
+<header>
+
+<!--
+'url' takes at least one argument, the name of a url().
+<a href="https://theHyperDream.com/myDream/signUp/">Sign Up</a>
+The above url is equivatlent to the ones below.
+
+--
+
+<span style="word-spacing:0.60em"> </span>
+
+-->
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+
+<!--
+style='background-image: url("static/myDream/webImages/logoBG.jpg"); background-size: 100% 100%;'
+-->
+
+ <!-- style='background-color: black'>
+
+<div class="contentRelative">
+
+ <a href="{{myVars.logoPicPath2}}">{{myVars.logoPicWords2 | safe}}</a>
+
+ -->
+
+<!--
+.contentRelative {
+  position: relative;
+  top: 0;
+ /* background: rgba(0, 0, 0, 0.5);  */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 5px;
+}
+
+-->
+
+
+<!-- My buttons - Put these last in this file so all the other content would scroll underneath them and change the position to
+fixed.
+
+<div class="contentFixed" id="mobile">
+
+-->
+
+<br><br>
+
+        <h3 style="position:relative">
+
+        <a href="{{myVars.builderPath}}">{{myVars.builderWords | safe}}</a>
+        <a href="{{myVars.thdPath}}">{{myVars.thdWords | safe}}</a>
+
+        <a href="{{myVars.guitarVideosPath}}">{{myVars.guitarVideosWords | safe}}</a>
+        <a href="{{myVars.artForSalePath}}">{{myVars.artForSaleWords | safe}}</a>
+        <a href="{{myVars.booksPath}}">{{myVars.booksWords | safe}}</a>
+        <a href="{{myVars.stockMarketPath}}">{{myVars.stockMarketWords | safe}}</a>
+        <a href="{{myVars.theFrogPath}}">{{myVars.theFrogWords | safe}}</a>
+        <a href="{{myVars.contactPath}}">{{myVars.contactWords | safe}}</a>
+
+
+
+        <!--
+        <a href="{{myVars.changePasswordPath}}">{{myVars.changePasswordWords | safe}}</a>
+        <a href="{{myVars.logPath}}">{{myVars.logWords | safe}}</a><a href="{{myVars.signUpPath}}">{{myVars.signUpWords | safe}}</a>
+        -->
+
+        </h3>
+
+
+
+    <h4 class="contentRelative" >
+
+        <a href="{{myVars.logoPicPath}}">{{myVars.logoPicWords | safe}}</a>
+
+        <a href="{{myVars.newLogoWordsPath}}">{{myVars.newLogoWords | safe}}</a>
+
+        <a href="{{myVars.lovePath}}">{{myVars.love | safe}}</a>
+    </h4>
+
+
+        <!--
+
+        this works.
+        <a href="{{myVars.logoPath}}">{{myVars.logoWords | safe}}<br><span style="color:red">and some more words</span></a>
+        ----
+
+        <img height=124px width="71%" src="{% static '/myDream/webImages/logoBG.jpg' %}">
+        -->
+
+
+<!--  Hello Dave
+
+{{myVars.thanks}}{{myVars.user | safe}}
+-->
+
+<!-- Log on so you can get the book and the art work.
+{{myVars.logOnMan | safe}}
+
+.contentRelative {
+  position: relative;
+  top: 0;
+ /* background: rgba(0, 0, 0, 0.5);  */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 0.1%;
+}
+
+-->
+
+<h3 class="contentRelative" color="white"  z-index="-1">You are on theHyperDream.com's LEGACY WEBSITE</h3>
+
+<!--
+<span style="color:black" z-index="10"> This website is NOT mobile friendly...</span>
+-->
+
+<h4 class="contentRelative" color="white"  z-index="-1">
+    Welcome to my website; where I explore music, art, literature and money.
+    <br>
+    Please click SHARE or LIKE, if you like it, and thanks for the support!
+    <br><br>
+    Thank You
+    <br>
+    David H Potschka
+
+
+</h4>
+
+
+<!--
+
+class="twitter-follow-button"
+class="twitterRelative"
+<a href="{{myVars.messagePath}}">{{myVars.messageWords | safe}}</a><a href="{{myVars.fiveSecondsPath}}">{{myVars.fiveSecondsWords | safe}}</a>
+
+-->
+<br><br>
+<a href="https://twitter.com/timetable1111" class="twitterRelative"  data-show-count="false">Follow @timetable1111</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+<br>
+<!-- Part 2 of 2 for the fb button.  -->
+<div class="fb-like" style='margin-left:1%' data-href="https://www.thehyperdream.com" data-width="15" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+
+
+<!--
+
+    <h3>
+<a href="{{myVars.booksPath}}">
+Get My Teenager On Track? Get That Special Person To Love Me? <br>
+Land That Massive Contract Now? Become Self Actualized? <br>
+NO CREDIT CARD OR EMAIL REQUIRED!<br>
+MOTIVATE ANYONE with these 50 Questions! <br>
+Read for FREE NOW!<br><br>
+
+Learn how to understand your/friends pattern, it is cool! And fun!  <br>
+They/you will like it, spread this technology by sharing to Facebook, sharing is caring! <br>
+Those who read all get a special bonus YEA!  Health, Wealth, Love and Happiness!<br>
+David H Potschka<br><br>
+
+Here's a few for you:  <br>
+"Forgiveness is easier, safer, enlightening and more profitable than revenge."<br>
+"Take on the worlds pain and make it your own... then what do You do?" <br>
+Exchange lives in your next life, what will happen, who will you be?  <br>
+<br>
+
+The concepts in this book can be adapted to any person in any situation.
+The first few points start off with the example of getting a
+teenager off drugs.
+<br>
+
+
+
+</a>
+    </h3><br>
+
+<h4>
+The book teaches you how to motivate people.  <br>
+<br>
+You can adapt it to your situation.  <br>
+This stuff should be taught in Grade 3.  What is going on?  <br>
+Why is the education system being manipulated? ;-)<br>
+David H Potschka<br>
+Teacher, Programmer, Author, etc. <br>
+-->
+
+<!--
+So I adapted my book to another book I wrote in 2007-2010 <br>
+TITLE:  <br>
+The Solution For the Stock Market <br>
+Contact me if you want to do some black box programming,  <br>
+I have over 400 working rules<br>
+YourHyperAwareAIisHere... no doubt, let the singularity continue!
+
+<a href="http://whatDoesTheFrogGot.appspot.com"</a>
+-->
+
+<!--
+The book is designed to help people of all ages and walks of life, <br>
+not just teenagers trying to quit drugs.  So read on, and continue <br>
+on the path of increased, enlightened, perception.<br>
+-->
+
+<br>
+
+
+<!-- Some parts of this web site are still under construction. -->
+<br>
+
+
+</h4>
+
+
+<!--
+<div class="fb-like" data-href="https://www.thehyperdream.com" data-width="15" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+-->
+
+
+        <h1>
+
+        </h1>
+
+
+		</header>
+
+<hr>
+
+		<div id='main'>
+
+			<nav>
+
+<!--  The blue mark appears because the image tag and its surrounding anchor tags have been placed
+on separate lines! If you place them on one line, the mark will not be displayed.  Also delete extra white space.
+-->
+
+<!--
+                <a href="{{myVars.survivesPath}}">{{myVars.survivesWords | safe}}</a>
+-->
+
+<!--
+<ul>
+
+    <li><a href="{{myVars.survivesPath}}" style='color:red'>{{myVars.survivesWords | safe}}</a></li>
+    <li><a href="https://www.theHyperDream.com/myDream/phone" style='color:red'>Best Phone On the Planet!</a></li>
+
+</ul>
+
+<!-- My amazon link
+
+<a href="https://www.amazon.com/gp/product/B06Y1G9SS8/ref=as_li_tl?ie=UTF8&tag=thehyp0e5-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B06Y1G9SS8&linkId=97bc89877885983f70e0d83ac0a6f75f"><span style="color:red;margin-left:30px;">Search all 6 million</span><br>
+<span style="color:red;margin-left:30px;">Amazon products!</span><br><img src="{% static '/myDream/adImages/amazon/truck.JPG' %}" width='264px' height='264px'><p style="font-size:12px;color:red;margin-left:30px;">I am an Amazon associate, <br>thanks for supporting <br>theHyperDream!</p></a>
+
+-->
+
+<!--
+<br><img src="{% static '/myDream/webImages/DavesImageSecond.gif' %}" width='264px' height='264px'>
+-->
+
+
+			</nav>
+
+
+			<article>
+
+
+
+
+
+
+
+
+<img class="contentRelative" src="{% static '/myDream/webImages/SlideShow/firstFrostForestN.jpg' %}" width='89%' height='47%'><br>
+
+<!--
+
+<img class="contentRelative" src="{% static '/myDream/webImages/SlideShow/firstFrostForestN.jpg' %}" width='894' height='470'><br>
+
+<img src="{% static '/myDream/webImages/roseN.jpg' %}" width='894' height='470'>
+-->
+<br><br>
+
+        <div class="contentRelative" color="white">
+            Dave's second short animated film:  Create Mountains
+	   <iframe width="640" height="480" src="https://www.youtube.com/embed/yYQ4oEpvOgI?rel=0" frameborder="0" allowfullscreen></iframe>
+	   </div>
+
+
+<!--
+<button onclick=playVid("myVideo")>Play Video</button>
+<button onclick=pauseVid("myVideo")>Pause Video</button>
+<button onclick=makeBig("myVideo")>Big Screen</button>
+<button onclick='makeNormal("myVideo")'>Normal Screen</button><br>
+
+<video id='myVideo' width='50%'><source src='/media/myVideos/laserMP4.mp4' type='video/mp4' />Your browser does not support HTML5 video.</video>
+<br><br>
+-->
+
+<!--  The javascript for the videoControl must be underneath the video container.  I don't think this is being used?
+<script type="text/javascript" src="/static/myDream/js/videoPlayer.js"></script>
+-->
+
+<br><br>
+
+			</article>
+
+
+			<aside>
+
+
+
+
+			</aside>
+
+
+		</div>
+
+		<footer>
+<a class="contentRelative" style="margin-left:10px" href="{{myVars.contactPath2}}">{{myVars.contactWords2 | safe}}</a>
+<span class="contentRelative" color="white">Dave</span><br>
+
+<!--
+<a href='https://www.rapidssl.com'><img src="{% static '/myDream/webImages/RapidSSL_SEAL-90x50.gif' %}" width='10%' height='10%' ></a>
+-->
+
+<br><br>
+
+<!--<img src="{ static '/myDream/webImages/Dave2.JPG' %}"><br>   target="_top"
+-->
+
+<img class="contentRelative" src="{% static '/myDream/webImages/Dave3.JPG' %}">
+
+
+
+<!--
+<p style="color:blue;margin-left:30px;">Problems getting pregnant?  Over 137,000 people succeeded using this <br>
+natural interactive program, FREE information!
+</p>
+
+
+<span style="margin-left:30px;">
+<a href="http://f8392gwmtaj6cu0jx9jkbbuz2n.hop.clickbank.net/" target="_blank"><img src="{% static '/myDream/adImages/baby.jpg' %}"></a>
+</span>
+
+
+<br><br>
+-->
+
+		</footer>
+
+
+<!--  Mobirise stuff  -->
+
+<!--
+<section class="engine"><a href="https://mobirise.info/r">bootstrap template</a></section><script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/popper/popper.min.js"></script>
+  <script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/tether/tether.min.js"></script>
+  <script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/ytplayer/jquery.mb.ytplayer.min.js"></script>
+  <script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
+  <script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/viewportchecker/jquery.viewportchecker.js"></script>
+  <script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/templates/myDream/webSiteBuilder/assets/theme/js/script.js"></script>
+
+-->
+
+<!--   End Mobirise stuff  -->
+
+
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+
+
+
+
+
+    </body>
+
+
+</html>

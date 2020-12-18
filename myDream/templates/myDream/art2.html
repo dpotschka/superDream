@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html>
+
+{% load static %}
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Programs/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+    <head>
+
+		<title>Dream Art</title>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <meta name="description" content="Stock Market Solution and builder of your website!">
+    <meta name="keywords" content="the hyper Dream, theHyperDream.com, stock market solution,
+    Stock Market Solution, builder of your website, dream, motivate, love, faith, hope, health, wealth,
+    happiness, ideas, great ideas">
+
+    <meta name="author" content="David H Potschka">
+
+    <meta property="og:title" content="Your Dream Art"/>
+    <meta property="og:description" content="Stock Market Solution and builder of your website!" />
+    <meta property="og:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta property="og:url" content="https://www.thehyperdream.com/myDream/artForSale/" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="243074516150509" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Your Dream Art" />
+    <meta name="twitter:description" content="Stock Market Solution and builder of your website!" />
+    <meta name="twitter:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta name="twitter:url" content="https://www.thehyperdream.com/myDream/artForSale/" />
+
+    <link rel="shortcut icon" href="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/static/myDream/webImages/LogoF240x240.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+				form, table, tr { display: inline; }
+
+            body {
+                    background-image: url("/static/myDream/webImages/asses.jpg");
+                     background-repeat: no-repeat;
+                      background-size: 100% 100%;
+                 }
+
+
+
+		</style>
+
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+    </head>
+
+<script>
+fbq('track', 'ViewContent', {
+value: 1,
+currency: 'USD'
+});
+</script>
+
+
+	<body>
+
+		<header>
+
+
+
+
+<!--
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+-->
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+
+
+<h3>
+
+<!--
+<a href='https://thehyperdream.webflow.io/thegoods#team'><img id="logoPic" style="margin-left:20px; margin-top:20px" height="49px" width="49px" src="/static/myDream/webImages/LogoF240x240.png" /></a>
+-->
+
+<a href='https://www.thehyperdream.com'><img id="logoPic" style="margin-left:20px; margin-top:20px" height="49px" width="49px" src="/static/myDream/webImages/LogoF240x240.png" /></a>
+
+<!--
+<a href="https://thehyperdream.webflow.io/"><img id="builder" height="25px" width="141px" src="/static/myDream/webImages/buttons/builder1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a href="https://www.thehyperdream.com"><img id="thd" height="25px" width="141px" src="/static/myDream/webImages/buttons/thd1.png" onmouseover="getid(this);" /></a>
+
+
+<a href="https://www.thehyperdream.com/myDream/guitarVideos/"><img id="guitarVideos" height="25px" width="141px" src="/static/myDream/webImages/buttons/guitarVideos/dgv1.png" onmouseover="getid(this);" /></a>
+<a href="https://www.thehyperdream.com/myDream/books/"><img id="books" height="25px" width="141px" src="/static/myDream/webImages/buttons/books/books1.png" onmouseover="getid(this);" /></a>
+<a href="https://www.thehyperdream.com/myDream/stockMarketPortfolio/"><img id="stocks" height="25px" width="141px" src="/static/myDream/webImages/buttons/stocks/stocks1.png" onmouseover="getid(this);" /></a>
+
+<!--
+<a href="http://www.whatdoesthefroggot.appspot.com/"><img id="theFrog" height="25px" width="141px" src="/static/myDream/webImages/buttons/theFrog/theFrog1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a href="https://www.thehyperdream.com/myDream/contact/"><img id="contact" height="25px" width="141px" src="/static/myDream/webImages/buttons/contact/contact1.png" onmouseover="getid(this);" /></a>
+</h3>
+
+
+
+<br>
+			<h3>
+			    Art Work for Sale,
+			    <br>
+			    Make a Request
+			    <br>
+			    Click on an image to expand it!
+            </h3>
+<br>
+<br>
+
+    </header>
+
+
+<div style="margin-left:5%; margin-right:5%; background-color:black; border-top:80px solid black; border-bottom:80px solid black;"
+align='center'; >
+
+
+
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/AlienN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/AlienN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/ArmPNGN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/ArmPNGN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/BLACKbunny6N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/BLACKbunny6N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/Bubbles1N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/Bubbles1N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/Ferns3N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/Ferns3N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/FireN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/FireN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/FlowersN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/FlowersN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/FrostNoRoseN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/FrostNoRoseN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/GlassBallN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/GlassBallN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/GlassBlackN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/GlassBlackN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/GlowySwirlN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/GlowySwirlN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/HandN.jpeg">
+  <img src="/static/myDream/webImages/SlideShow/HandN.jpeg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/IngridBodyN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/IngridBodyN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/IngridCropN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/IngridCropN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/JewelN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/JewelN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/Log1N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/Log1N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/MaggieFrog8N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/MaggieFrog8N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/PurpleIceN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/PurpleIceN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/Rashida13N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/Rashida13N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/RashidaBodyN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/RashidaBodyN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/SmudgeSN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/SmudgeSN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/StarsJPEGN.jpeg">
+  <img src="/static/myDream/webImages/SlideShow/StarsJPEGN.jpeg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/YOURaiIShereN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/YOURaiIShereN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/ab2N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/ab2N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/backR3N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/backR3N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/bustN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/bustN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/catHand7FN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/catHand7FN.jpg" alt="Forest" style="width:192px; height:108px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/cometN.jpeg">
+  <img src="/static/myDream/webImages/SlideShow/cometN.jpeg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/desert2pngN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/desert2pngN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/double3F.jpg">
+  <img src="/static/myDream/webImages/SlideShow/double3F.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/dragon16N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/dragon16N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/dragonDecClipN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/dragonDecClipN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/eyeN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/eyeN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/fallingN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/fallingN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/firstFrostForestN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/firstFrostForestN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/greenLifeN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/greenLifeN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/fun1CpngN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/fun1CpngN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/lIn4N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/lIn4N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/lOut2N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/lOut2N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/leftPalmFN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/leftPalmFN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/monkeyN.JPG">
+  <img src="/static/myDream/webImages/SlideShow/monkeyN.JPG" alt="Forest" style="width:192px"></a>
+
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/rIn3N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/rIn3N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/molten sea do not enterWM.jpg">
+  <img src="/static/myDream/webImages/SlideShow/molten sea do not enterWM.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/rOut4N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/rOut4N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/rlcN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/rlcN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/roseN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/roseN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/sharkMonkeyN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/sharkMonkeyN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/spaceGasesN.jpeg">
+  <img src="/static/myDream/webImages/SlideShow/spaceGasesN.jpeg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/squ6N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/squ6N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/squirN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/squirN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/nebulaN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/nebulaN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/theEcho7NetN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/theEcho7NetN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/twoLegs3N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/twoLegs3N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/wa8N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/wa8N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/volcanoN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/volcanoN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/w5N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/w5N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/mountains1N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/mountains1N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/wb6N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/wb6N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/moreMountainsN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/moreMountainsN.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/theDeep3D.jpg">
+  <img src="/static/myDream/webImages/SlideShow/theDeep3D.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/cabinTrail6.jpg">
+  <img src="/static/myDream/webImages/SlideShow/cabinTrail6.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/cityLife.jpg">
+  <img src="/static/myDream/webImages/SlideShow/cityLife.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/formsDone.jpg">
+  <img src="/static/myDream/webImages/SlideShow/formsDone.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/MountainsJuly27N.jpg">
+  <img src="/static/myDream/webImages/SlideShow/MountainsJuly27N.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/gradient sky white wm.jpg">
+  <img src="/static/myDream/webImages/SlideShow/gradient sky white wm.jpg" alt="Forest" style="width:192px"></a>
+
+<a target="_blank" href="/static/myDream/webImages/SlideShow/waterN.jpg">
+  <img src="/static/myDream/webImages/SlideShow/waterN.jpg" alt="Forest" style="width:192px"></a>
+
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+		<footer>
+
+
+
+
+
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

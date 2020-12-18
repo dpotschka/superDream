@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+{% load static %}
+
+
+    <head>
+
+		<title>YourProfile</title>
+
+
+
+		<link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+<meta name="description" content="Now is the time!">
+<meta name="keywords" content="thd, THD, theHyperDream, thehyperdream, the hyperdream, the hyper dream,
+the dream, dream, self help, help me, dream boy, dream girl,
+motivate, motivate anyone, love, health, wealth, happiness,
+subliminal questions, motivation questions, motivation, ideas, great ideas, guru,
+hope, get off drugs, get my teenager off drugs, subliminal intervention, subliminal, intervention, quit drugs, help others, help all,
+help ">
+<meta name="author" content="David H Potschka">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+
+
+
+
+		</style>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+    </head>
+
+	<body>
+
+		<header>
+<!--
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+-->
+
+<a href="http://www.thehyperdream.com/"><img id="logoPic" style="margin-left:20px; margin-top:20px" height="11.11%" width="11.11%" src="/static/myDream/theArt/thd3f.png" /></a>
+
+<br><br>
+
+<a title="Change Your Password?" href={% url 'myDream:changePassword' %}><img id="password" height="15%" width="15%" src="/static/myDream/webImages/buttons/password/password1.jpg" onmouseover="getid(this);" /></a>
+<br><br>
+Let me know if we should implement this next bit...<br>
+This is where you can see a list of your friends (who you can message)<br>
+and send friend requests etc., webpages you've built, <br>
+people you have voted for, people who have voted for your web page,<br>
+and change your profile picture and password.  Yea,<br>
+Health, Wealth, Happiness, Love !!!<br>
+In production available soon?
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+			</nav>
+
+
+
+			<article>
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+<img src="{% static '/myDream/webImages/fun1CpngN.jpg' %}">
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

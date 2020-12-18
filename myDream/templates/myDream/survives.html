@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+{% load static %}
+
+
+    <head>
+
+		<title>Your Survival  Page</title>
+
+
+
+		<link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+
+        <!-- This is for your scroll buttons so they work properly, see the notes at the bottom of this file.
+		for this to work locally in chrome you must use the cmd shell and navigate to /chrome.exe and run it with this
+		flag --allow-file-access-from-files
+		-->
+
+		<script type="text/javascript" src="/static/myDream/js/prefixfree.min.js"></script>
+
+
+<meta name="description" content="Now is the time!">
+<meta name="keywords" content="thd, THD, theHyperDream, thehyperdream, the hyperdream, the hyper dream,
+the dream, dream, self help, help me, dream boy, dream girl,
+motivate, motivate anyone, love, health, wealth, happiness,
+subliminal questions, motivation questions, motivation, ideas, great ideas, guru,
+hope, get off drugs, get my teenager off drugs, subliminal intervention, subliminal, intervention, quit drugs, help others, help all,
+help ">
+<meta name="author" content="David H Potschka">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+
+
+
+
+		</style>
+
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+    </head>
+
+	<body>
+
+<div id="fb-root"></div>
+
+<script>
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+
+            if (d.getElementById(id)) return;
+
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+
+
+
+		<header>
+<!--
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+-->
+
+
+
+<a href="http://www.thehyperdream.com/"><img id="logoPic" style="margin-left:20px; margin-top:20px" height="11.11%" width="11.11%" src="/static/myDream/theArt/newLogoF.png" /></a>
+
+<h3 style="color:red; margin-left:30px;">
+{{thanks | safe}}
+</h3>
+
+    <h3 style="color:blue;margin-left:30px;">
+<div class="fb-like" data-href="https://www.thehyperdream.com" data-width="15" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+
+
+
+<br><br>
+			CONGRATULATIONS - YOU FOUND THE FREE STUFF <br><br>
+
+There are 12 products here; scroll down to find the ad that brought you here & "CLICK"!<br>
+              All these products are of the HIGHEST QUALITY!  <br>
+                   Thank You For Your Purchase, oh wait <br>
+                        the first 10 are FREE Yea! <br>
+    Press "Share" above so your friends can get in on this cool stuff!<br>
+    I love the STINGER and don't forget to check out my Psycho Guitar Solo <br>
+                 at the bottom of this page!!!<br><br>
+
+                        Cheers, <br><br>
+
+                        Dave
+                        <br><br>
+                        <hr>
+    </h3>
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+			</nav>
+
+
+
+			<article>
+
+<!-- Credit card sized knife -->
+
+<p style="color:red;margin-left:30px;">
+Ultra Light, Ultra Slim, Surgical Steel Blade, <br>
+Waterproof and Safe, Ultra Cool, Self Sharpening and FREE! <br>
+Survival knife folds up into the size of a credit card!  <br>
+FREE while supplies last!  007 Would Be Proud!
+</p>
+<a href="http://b3170kqq0bvafwfc5p3gw7h3xi.hop.clickbank.net/" target="_blank"><img id="knife" style="margin-left:20px; margin-top:20px" width="300" height="250" src="/static/myDream/adImages/survives/knife.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- HyBeam Tactical Military FlashLight -->
+
+<p style="color:red;margin-left:30px;">
+FREE Hybeam Tactical Military Flashlight! <br>
+Authentic YAG™ bulb produces a blindingly bright light! <br>
+Crafted from aircraft grade aluminum, ULTRA TOUGH! <br>
+Features a 3 stage switch with High, Low, and Strobe! <br>
+Beveled edge so that it can double as a defensive tool! <br>
+A Must Have Now!
+</p>
+<a href="http://1d70cexnyyuais3qxfz233n4qn.hop.clickbank.net/" target="_blank"><img id="hyBeam" style="margin-left:20px; margin-top:20px" width="300" height="250" src="/static/myDream/adImages/survives/hyBeamSmall.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- Water Proof Match -->
+
+<p style="color:red;margin-left:30px;">
+FREE Waterproof Match!  <br>
+Strikes hot, burns hot: Ferro rod strikes at <br>
+over 3,000 degrees and flame burns at over 600 degrees Fahrenheit! <br>
+BONUS Get the new Ultimate Survival Skills book FREE!
+</p>
+<a href="http://db242lsjuyv5do0q4b3975lqdq.hop.clickbank.net/" target="_blank"><img id="Match" style="margin-left:20px; margin-top:20px" width="300" height="250" src="/static/myDream/adImages/survives/matchF.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- 7-in-1 Multi Tool -->
+
+<p style="color:red;margin-left:30px;">
+FREE 7-in-1 Multi Tool. <br>
+Razor Sharp Surgical Blade! It even has a can opener! <br>
+$29.99 value, yours FREE now! Get Yours While Supplies Last!
+</p>
+<a href="http://1b16b9skyyo8dv6oyj93zzmz78.hop.clickbank.net/" target="_blank"><img id="multiTool" style="margin-left:20px; margin-top:20px" width="437" height="454" src="/static/myDream/adImages/survives/multiToolF.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- popLamp -->
+
+<p style="color:red;margin-left:30px;">
+FREE 2-in-1 Flashlight And Lantern! This Water Resistant Light <br>
+Holds Up In The Harshest of Environments.  Only 4 Ounces! <br>
+$14.99 Value, Yours FREE NOW!
+</p>
+<a href="http://0468cm2e70kdoxeg3ns2plbsbj.hop.clickbank.net/" target="_blank"><img id="popLamp" style="margin-left:20px; margin-top:20px" width="421" height="453" src="/static/myDream/adImages/survives/popLampF.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- Water Proof Lighter -->
+
+<p style="color:red;margin-left:30px;">
+FREE Waterproof Lighter, stainless steel! <br>
+Guaranteed for 30k strikes and then <br>
+replaceable wick and flint, should last a lifetime. <br>
+Acquire this life saver NOW!
+</p>
+<a href="http://8e9c4cqm43jghwfl8pye4byf58.hop.clickbank.net/" target="_blank"><img id="lighter" style="margin-left:20px; margin-top:20px" width="300" height="250" src="/static/myDream/adImages/survives/lighterSmallF.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- fireKable -->
+
+<p style="color:red;margin-left:30px;">
+FREE ParaCord FireKable bracelet! <br>
+80 feet of usable cordage.  Ferro rod and striker at 3000 degrees hot! <br>
+Signal whistle so you won't have to waste your<br>
+voice in a survival situation! <br>
+Get Yours While Supplies Last!
+</p>
+<a href="http://9108bhuo-7ncps9f1p7g09qoft.hop.clickbank.net/" target="_blank"><img id="fireKable" style="margin-left:20px; margin-top:20px" width="300" height="250" src="/static/myDream/adImages/survives/fireKableF.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- Credit card tool -->
+
+<p style="color:red;margin-left:30px;">
+FREE Surgical Steel Credit Card Tool Kit! <br>
+It's the size of a credit card and does all this: <br>
+Can Opener, Knife Edge, Slotted/Flathead Screwdriver, <br>
+Ruler, Bottle Cap Opener, 4 Position Wrench, Saw Blade, <br>
+Direction Ancillary Indicator, 2 Position Wrench, <br>
+Keychain/Lanyard Hole.  Fits in your wallet! <br>
+Claim Yours Now!
+</p>
+<a href="http://6df0fgygvyq4oved8h-a4a36j7.hop.clickbank.net/" target="_blank"><img id="cardTool" style="margin-left:20px; margin-top:20px" width="517" height="463" src="/static/myDream/adImages/survives/survivalBusinessCardOneF.jpg" /></a>
+<a href="http://6df0fgygvyq4oved8h-a4a36j7.hop.clickbank.net/" target="_blank"><img id="cardTool" style="margin-left:20px; margin-top:20px" width="348" height="485" src="/static/myDream/adImages/survives/survivalBusinessCardTwoF.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- evac -->
+
+<p style="color:red;margin-left:30px;">
+FREE Emergency Car Escape Tool (Evac3)! <br>
+Car Accident, Your Trapped in Your Car... <br>
+This Tool Easily Cuts Through Jammed SeatBelts <br>
+and Smashes Stuck Windows So You Can Escape! <br>
+This is a Must Have!  Get One NOW!
+</p>
+<a href="http://ea8dcg1iz7rahybm2o046554i9.hop.clickbank.net/" target="_blank"><img id="evac" style="margin-left:20px; margin-top:20px" width="300" height="250" src="/static/myDream/adImages/survives/evacF.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- optic -->
+
+<p style="color:red;margin-left:30px;">
+FREE Optical Fire Starter! <br>
+Credit card size, fits in your wallet! <br>
+Get Yours Now!
+</p>
+<a href="http://072ccovmv0sgomanvea3wa3cuu.hop.clickbank.net/" target="_blank"><img id="optic" style="margin-left:20px; margin-top:20px" width="300" height="250" src="/static/myDream/adImages/survives/optic Fire StarterAdF.jpg" /></a>
+<hr>
+<br>
+
+
+<p style="color:blue;margin-left:30px;">
+    These last two products are not free but <br>
+    they are pretty cool and a great deal! <br>
+    I particularly like the STINGER myself.<br>
+    Dave.
+</p>
+<br>
+
+
+<!-- pen -->
+
+<p style="color:red;margin-left:30px;">
+Stinger Self-Defence Tactical Pen! <br>
+This Titanium Coated Pen Drops a 300lb <br>
+Attacker Like a Sack Of Potatoes.  <br>
+Hand Machined Out of One Solid Block<br>
+of Aircraft Grade Aluminum. <br>
+Breaks Windows and Writes Upside Down and Under Water. <br>
+Regular Price $50.  NOW Just $19.95, FREE SHIPPING!!! <br><br>
+
+But you absolutely need to act now, there are a limited number <br>
+of these pens available and they WILL NOT last long! <br>
+100% MONEY BACK GUARANTEE!!!
+</p>
+<a href="http://f94039yi4-nffp7k2d4e9hold1.hop.clickbank.net/" target="_blank"><img id="pen" style="margin-left:20px; margin-top:20px" width="1191" height="157" src="/static/myDream/adImages/survives/penOneF.jpg" /></a>
+<a href="http://f94039yi4-nffp7k2d4e9hold1.hop.clickbank.net/" target="_blank"><img id="pen" style="margin-left:20px; margin-top:20px" width="354" height="371" src="/static/myDream/adImages/survives/penTwoF.jpg" /></a>
+<a href="http://f94039yi4-nffp7k2d4e9hold1.hop.clickbank.net/" target="_blank"><img id="pen" style="margin-left:20px; margin-top:20px" width="1302" height="536" src="/static/myDream/adImages/survives/penThreeF.jpg" /></a>
+<hr>
+<br>
+
+
+<!-- aqua -->
+
+<p style="color:red;margin-left:30px;">
+AquaStiq Personal Water Purification Stick! <br>
+Simple As Dipping 1 End Into Any Water Source And Sucking <br>
+Clean Water Out Of The Other End! <br>
+Weighs only 2 ounces! <br>
+Protects against all these and MORE: <br>
+Legionella (legionnaires disease), Norovirus, Shigella, <br>
+Campylobacter, Salmonella, Cryptosporidium, E. Coli, Giardia... <br>
+Right now you can get your very own AquaStiq™ for just $17.95 <br>
+and I'll take care of the shipping... <br>
+That's 27% off the retail price + FREE SHIPPING!!! <br>
+Order NOW While Supplies Last! <br>
+</p>
+<a href="http://4e194bppwzj7irfyxsmfzauter.hop.clickbank.net/" target="_blank"><img id="aqua" style="margin-left:20px; margin-top:20px" width="983" height="460" src="/static/myDream/adImages/survives/aquaOneF.jpg" /></a>
+<hr>
+<br>
+
+
+<h3 style="color:blue; margin-left:30px;">
+
+
+
+I post valuable information on myDream/survives page from time to time. <br>
+Here is the latest:<br><br>
+
+Like it or not, marijuana legalization is sweeping the country…
+On Election Day, California, Nevada and Massachusetts all roundly voted to legalize recreational marijuana use.
+And that means that very soon dozens of tiny marijuana firms could skyrocket by 100%, 300%, 500% or higher.
+This is your chance to turn a single $50 bill… into an absolute fortune.
+But you need to get in ASAP!
+According to CNBC, “Now is the right time to bet big on marijuana... [as] the industry is poised to be gigantic.”
+And Forbes is touting that “hundreds of millions of dollars are pouring in…”
+<br><br>
+<a href="https://pro.agorafinancial.com/p/TEK_secretpot_1016/LTEKT1AE/?h=true" target="_blank">Click here for full details on how to stake your claim.</a>
+<br><br>
+Cheers<br>
+<br>
+Dave,
+<br><br>
+P.S. Already, some of the biggest and most successful names on Wall Street have
+acquired major positions in companies in the marijuana sector, investing millions…
+I’m talking about PayPal creator Peter Thiel…  Reddit CEO and founder Steve Huffman…
+legendary hedge fund manager Joel Greenblatt... and even Warren Buffett.
+<br><br>
+P.P.S Don't forget to read my current book <a href="https://www.thehyperdream.com/myDream/books/"> "Motivate Anyone!"</a>
+<br>
+I have also been writing another book called "Stock Market Solution" since 2006.  It will be available at this
+web site in the early spring of 2017.  Check back to this site then and do your self a favor.  The
+good life awaits you! <br>
+Legal disclaimer:  Everything on this page above this line is a scam or fake news?
+<br><br>
+
+Enter your email if you want alerts on other valueable <br>
+information (or products) before it hits the streets!<br>
+<form action="{% url 'myDream:survives'%}" method="post">
+
+<!-- Cross Site Request Forgeries.  Stops hackers, from django.  Lesson 4 -->
+    {% csrf_token %}
+
+<!-- The form is filled in automatically by forms.py, class
+SurvivesForm -->
+
+    {{ form.as_table }}
+
+    <input type="submit" value="Thank You">
+</form>
+
+</h3>
+
+<h1 style="color:blue; margin-left:30px;">
+Thank You and now for the Psycho Guitar Solo, as promised!
+</h1>
+
+
+        <div>
+	        <iframe width="640" height="480" src="//www.youtube.com/embed/HX75vVUYxaY?rel=0" frameborder="0" allowfullscreen></iframe>
+	    </div>
+
+
+<!-- Get pregnant ad -->
+
+<p style="color:blue;margin-left:30px;">Problems getting pregnant?  Over 137,000 people succeeded using this <br>
+natural interactive program, FREE information!
+</p>
+
+<span style="margin-left:30px;">
+<a href="http://f8392gwmtaj6cu0jx9jkbbuz2n.hop.clickbank.net/" target="_blank"><img src="{% static '/myDream/adImages/baby.jpg' %}"></a>
+</span>
+
+
+<br><br>
+
+
+
+
+
+
+<!-- Siezed Cars gov't auction clickbank -->
+
+
+<p><a href="http://8fd01ctn32m8hxarukj2p7uu61.hop.clickbank.net/" target="_blank">
+<img class="bildlank" alt="America's #1 Trusted Source to Gov't Car Auctions" src=" http://www.gov-auctions.org/banners/banner_250x250.jpg" align="top" vspace="3" border="0" width="250" height="250"></a></p>
+
+
+<!-- Cat speaking bible yea -->
+<a href="http://8a4acg-i-amdfz62qnq1w95oa5.hop.clickbank.net/" target="_blank">Learn cat language...Click Here!, I already know it yea!</a>
+
+
+
+<!-- John Crestani make money on the internet 47$ per month.
+http://c41c8mzix7walkdbgqhb5kekdx.hop.clickbank.net/
+-->
+<br><br>
+<a href="http://c41c8mzix7walkdbgqhb5kekdx.hop.clickbank.net/" target="_blank">Internet Money, a course you can take to fast track you!  Yea!</a>
+
+
+<!-- kittens -->
+
+    <img id="evac" style="margin-left:20px; margin-top:20px" width="300" height="250" src="/static/myDream/webImages/cat3.jpeg" />
+
+
+
+
+<!-- Vert-Shock, dunk, for basketball players, learn how to jump higher. -->
+
+<a href="http://13039jpiz2i5lxe5rwy00bo2y0.hop.clickbank.net/" target="_blank"><img id="dunk" style="margin-left:20px; margin-top:20px" width="785" height="417" src="/static/myDream/webImages/dunk.JPG" /></a>
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+
+
+		</footer>
+
+
+<!-- My scroll buttons.  -->
+		<div id="clicker">
+     		^
+		</div>
+
+
+<!-- These don't work on the ipad but the javascript needs them as stubs or it can't find
+them and causes an error, and I don't want to alter the javascript scrollButtons.js
+I think the id's have been commented out in the "style".
+-->
+
+        <div id="floatieUp">
+
+		</div>
+
+		<div id="floatieDn">
+
+		</div>
+
+<script type="text/javascript" src="/static/myDream/js/scrollButtons.js"></script>
+
+
+
+    </body>
+
+
+
+</html>
+

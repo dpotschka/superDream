@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html>
+
+{% load static %}
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Programs/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+    <head>
+
+		<title>Dream Art</title>
+
+
+		<link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+<meta name="description" content="Now is the time!">
+<meta name="keywords" content="thd, THD, theHyperDream, thehyperdream, the hyperdream, the hyper dream,
+the dream, dream, self help, help me, dream boy, dream girl,
+motivate, motivate anyone, love, health, wealth, happiness,
+subliminal questions, motivation questions, motivation, ideas, great ideas, guru,
+hope, get off drugs, get my teenager off drugs, subliminal intervention, subliminal, intervention, quit drugs, help others, help all,
+help ">
+<meta name="author" content="David H Potschka">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+				form, table, tr { display: inline; }
+
+            body {
+                    background-image: url("/static/myDream/webImages/asses.jpg");
+                     background-repeat: no-repeat;
+                      background-size: 100% 100%;
+                 }
+
+
+
+		</style>
+
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+    </head>
+
+<script>
+fbq('track', 'ViewContent', {
+value: 1,
+currency: 'USD'
+});
+</script>
+
+
+	<body>
+
+		<header>
+
+
+
+
+<!--
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+-->
+
+<a href="http://www.thehyperdream.com/"><img id="logoPic" style="margin-left:20px; margin-top:20px" height="150px" width="150px" src="/static/myDream/theArt/newLogoF.png" /></a>
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+
+
+<a href="https://david-potschkas-five-star-project.webflow.io/">'<img id="builder" height="62px" width="222px" src="/static/myDream/webImages/buttons/builder1.png" onmouseover="getid(this);" />'
+<a href="http://www.thehyperdream.com">'<img id="thd" height="62px" width="222px" src="/static/myDream/webImages/buttons/thd1.png" onmouseover="getid(this);" />'
+
+
+<a href="http://www.thehyperdream.com/myDream/guitarVideos/"><img id="guitarVideos" height="62px" width="222px" src="/static/myDream/webImages/buttons/guitarVideos/dgv1.jpg" onmouseover="getid(this);" /></a>
+<a href="http://www.thehyperdream.com/myDream/books/"><img id="books" height="62px" width="222px" src="/static/myDream/webImages/buttons/books/books1.jpg" onmouseover="getid(this);" /></a>
+<a href="http://www.thehyperdream.com/myDream/stockMarketPortfolio/"><img id="stocks" height="62px" width="222px" src="/static/myDream/webImages/buttons/stocks/stocks1.jpg" onmouseover="getid(this);" /></a>
+<a href="http://www.thehyperdream.com/myDream/contact/"><img id="contact" height="62px" width="222px" src="/static/myDream/webImages/buttons/contact/contact1.jpg" onmouseover="getid(this);" /></a>
+
+<br>  <hr>
+
+			<h3>
+			This is where the art is, buy it now before I get better at it and the price sky rockets!  lol.<br>
+			Currently you can only view the art on a PC (sorry, but it's art!)
+			<br><br>
+			Limited edition images which you can turn into prints...
+			<br><br>
+			Help Dave, the starving artist, <br>
+			create more paintings, music and literature.  <br>
+			PayPal Secured and 256 bit encryption.<br>
+			<br>
+			Current Bonus:
+			Get frostNoRose for free when you order <br>
+			firstFrostForest!  <br>
+			</h3>
+			<h4>
+			You get two sizes of each.  Small = about 4' x 3' and large is 2x small.<br>
+            </h4>
+            <h5>
+                Other images vary in size.
+            </h5>
+		</header>
+
+
+<!--
+<span style="color:blue;margin-left:30px;">You can view the art now for free but if you want to purchase it you must
+<a href="{% url 'myDream:signPost' %}"><img id="signUp" width="192" height="45" src="/static/myDream/webImages/buttons/signUp/signUp1.jpg" onmouseover="getid(this);" /></a>
+and then logOn.</span>
+<br>
+-->
+
+<p style="color:blue;margin-left:30px;"> Art work by Dave.  You can view the art for free.  <br>
+First choose a price range to load the images then start clicking "Get Next Painting".</p>
+
+
+
+<!-- This is the old "Buy Now" button
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input id="payPalCode" type="hidden" name="hosted_button_id" value="P7Q8E7EZ7WN6W">
+<table>
+	<tr>
+		<td>
+			<span style='background:white'><input type="hidden" name="on0" value="Which painting do you want?">Help Dave, the starving artist,
+			create more paintings and music.  Buying art will also help stop this web page from going over quota.
+			Just type in the title of the painting and your email address, and I will email you the original sized painting within 72 hours.
+			PayPal Secured.
+			</span>
+		</td>
+	</tr>
+	<tr>
+	    <td>
+			<span style="color:blue;">{{contactDave2 | safe}}</span>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="textarea" name="os0" maxlength="500" rows='4' cols='32' style='width:300px; color:green' value='title =     , email = '></td>
+	</tr>
+</table>
+<span style="margin-left:30px;"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></span>
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+-->
+
+
+	<span id='10' style="color:blue;margin-left:30px;"><button  onclick='getAssets("10")' type='button'>$10 Art</button></span>
+	<span id='20' style="color:blue;margin-left:30px;"><button  onclick='getAssets("20")' type='button'>$20 Art</button></span>
+	<span id='40' style="color:blue;margin-left:30px;"><button  onclick='getAssets("40")' type='button'>$40 Art</button></span>
+	<span id='80' style="color:blue;margin-left:30px;"><button  onclick='getAssets("80")' type='button'>$80 Art</button></span>
+	<span id='140' style="color:blue;margin-left:30px;"><button  onclick='getAssets("140")' type='button'>$140 Art</button></span>
+	<span id='220' style="color:blue;margin-left:30px;"><button  onclick='getAssets("220")' type='button'>$220 Art</button></span>
+
+	<!--
+	<span id='test' style="color:blue;margin-left:30px;"><button  onclick='getAssets("test")' type='button'>$test Art</button></span>
+	-->
+
+<!-- getAssets sends back whichDollar amount the user is on.  So that when they come back from paypal
+I can reload the image they were at.  I need 'stop' in there in case the user goes to paypal before loading any images.
+That screws up the images afterwards.  Used in ipadFade4 window.onload and window.onbeforeunload
+ CAUTION: A span tag does not have a value.
+-->
+	<p id='whichDollar' hidden >stop</p>
+	<p id='fadeInIndex' hidden >stop</p>
+	<p id='fadeOutIndex' hidden >stop</p>
+
+
+<br>
+
+<!-- Sandbox testing.  Yea it WORKS! RYCM7AWZ3E8QFF7P, 6S9JN4DKMU5SU
+
+<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="6S9JN4DKMU5SU">
+<input type="hidden" name="lc" value="CA">
+<input type="hidden" name="item_name" value="DavesShoppingItemName">
+<input type="hidden" name="button_subtype" value="products">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="cn" value="Add special instructions to the seller:">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="https://www.thehyperdream.com/myDream/paymentReceived">
+<input type="hidden" name="cancel_return" value="https://www.thehyperdream.com/myDream/artForSale">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHosted">
+-->
+
+<!--
+<table>
+<tr><td><input type="hidden" name="on0" value="DavesNameOfDropDown">DavesNameOfDropDown</td></tr><tr><td><select name="os0">
+	<option value="birds1">birds1 $10.00 USD</option>
+	<option value="Lions2">Lions2 $10.00 USD</option>
+	<option value="Alligator3">Alligator3 $10.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="option_select0" value="birds1">
+<input type="hidden" name="option_amount0" value="10.00">
+<input type="hidden" name="option_select1" value="Lions2">
+<input type="hidden" name="option_amount1" value="10.00">
+<input type="hidden" name="option_select2" value="Alligator3">
+<input type="hidden" name="option_amount2" value="10.00">
+<input type="hidden" name="option_index" value="0">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+End sandbox testing -->
+
+
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="DS7NH8WWHBEDE">
+<input type="hidden" name="lc" value="CA">
+<input type="hidden" name="item_name" value="Dave's Paintings">
+<input type="hidden" name="amount" value="10.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="products">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="cn" value="Special instructions to the seller">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="https://www.thehyperdream.com/myDream/paymentReceived">
+<input type="hidden" name="cancel_return" value="https://www.thehyperdream.com/myDream/artForSale">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHosted">
+
+
+<br>
+
+<table>
+<tr style="color:blue;margin-left:30px;"><td><input type="hidden" name="on0" value="acquiring">acquiring</td></tr>
+<tr><td>
+
+<select name="os0">
+
+
+<!-- The 'value' here must match the 'value' below in the paypal 'option_select'
+input tags below.  The 'value' here (and innerHTML) is altered by ipadFade4 as the user
+clicks through the slideshow.-->
+
+	<!-- $10 art -->
+	<option id="currentImage" value="Jewel">Jewel $10</option>
+
+<!--
+These were screwing things up if the user clicked on them.
+
+	<option value="GlassBlack">GlassBlack $10.00</option>
+	<option value="sharkMonkey">sharkMonkey $10.00</option>
+	<option value="SmudgeS">SmudgeS $10.00</option>
+
+	<option value="falling">falling $10.00</option>
+	<option value="Hand">Hand $10.00</option>
+	<option value="GlassBall">GlassBall $10.00</option>
+	<option value="monkey">monkey $10</option>
+	<option value="greenLife">greenLife $10</option>
+
+	<!-- $20 art
+	<option value="Fire">Fire $20.00</option>
+	<option value="Log1">Log1 $20.00</option>
+	<option value="squir">squir $20.00</option>
+	<option value="PurpleIce">PurpleIce$20.00</option>
+
+	<option value="backR3">backR3 $20.00</option>
+	<option value="lIn4">lIn4 $20.00</option>
+	<option value="lOut2">lOut2 $20.00</option>
+	<option value="rIn3">rIn3 $20.00</option>
+	<option value="rlc">rlc $20.00</option>
+
+	<option value="rOut"> rOut $20.00</option>
+	<option value="Stars">Stars $20.00</option>
+	<option value="YOURaiIShere">YOURaiIShere $20.00</option>
+	<option value="dragon">dragon $20.00</option>
+	<option value="nebula">nebula $20.00</option>
+
+
+	<!-- $40 art
+	<option value="Flowers">Flowers $40.00</option>
+	<option value="comet">comet $40.00</option>
+	<option value="Ferns">Ferns $40.00</option>
+	<option value="leftPalm">leftPalm $40.00</option>
+
+	<option value="catHand">catHand $40.00</option>
+	<option value="MaggieFrog">MaggieFrog $40.00</option>
+	<option value="twoLegs">twoLegs $40.00</option>
+	<option value="spaceGases">spaceGases $40.00</option>
+	<option value="eye">eye $40.00</option>
+
+	<!-- $80 art
+	<option value="glowySwirl">glowySwirl $80.00</option>
+	<option value="Alien">Alien $80.00</option>
+	<option value="Arm">Arm $80.00</option>
+	<option value="Bubbles">Bubbles $80.00</option>
+
+	<option value="theEcho7Net">theEcho7Net $80.00</option>
+	<option value="w5">w5 $80.00</option>
+	<option value="w8">w8 $80.00</option>
+	<option value="wb6">wb6 $80.00</option>
+
+	<option value="fun">fun $80.00</option>
+	<option value="IngridBody">IngridBody $80.00</option>
+	<option value="dragonMountain">dragonMountain $80.00</option>
+	<option value="RashidaBody">RashidaBody $80.00</option>
+	<option value="bust">bust $80.00</option>
+
+	<!-- $140 art
+	<option value="BLACKbunny">BLACKbunny $140.00</option>
+	<option value="Rashida">Rashida $140.00</option>
+	<option value="squ6">squ6 $140.00</option>
+	<option value="Ingrid">Ingrid $140.00</option>
+	<option value="rose">rose $140.00</option>
+
+	<!-- $220 art
+	<option value="firstFrostForest">firstFrostForest $220.00</option>
+	<option value="abstract">abstract $220.00</option>
+	<option value="desert">desert $220.00</option>
+	<option value="volcano">volcano $220.00</option>
+-->
+</select> </td></tr>
+
+<!--
+<tr><td><input type="hidden" name="on1" value="Email for delivery required">Email for delivery required</td></tr>
+-->
+
+<!-- The value flashes then disappears!!!!!!???????????
+ipadFade4.js is saving the last thing typed in here, when you leave this page.
+On page reload there is nothing in here so that's what ipadFade4 puts in here, 'nothing'.
+I have to tell ipadFade4 to accept the initial email as I am putting it in here
+directley now from handler artForSale.  Get rid of that JAVASCRIPT BIT you don't need it anymore.
+-->
+
+<!--
+<tr><td><input type="text" name="os1" value={{email}} maxlength="200"></td></tr>
+-->
+
+</table>
+
+
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="option_index" value="0">
+
+
+<!--
+I believe the 'value' here must match the 'value' above at the select form.
+These go to paypal to fill in the price on the order form etc.
+
+CAUTION:  You can't have more than 100 option_select fields.
+-->
+
+<!-- $10 art -->
+<input type="hidden" name="option_select0" value="Jewel">
+<input type="hidden" name="option_amount0" value="10.00">
+
+<input type="hidden" name="option_select1" value="GlassBlack">
+<input type="hidden" name="option_amount1" value="10.00">
+
+<input type="hidden" name="option_select2" value="sharkMonkey">
+<input type="hidden" name="option_amount2" value="10.00">
+
+<input type="hidden" name="option_select3" value="SmudgeS">
+<input type="hidden" name="option_amount3" value="10.00">
+
+<input type="hidden" name="option_select4" value="falling">
+<input type="hidden" name="option_amount4" value="10.00">
+
+<input type="hidden" name="option_select5" value="Hand">
+<input type="hidden" name="option_amount5" value="10.00">
+
+<input type="hidden" name="option_select6" value="GlassBall">
+<input type="hidden" name="option_amount6" value="10.00">
+
+<input type="hidden" name="option_select7" value="monkey">
+<input type="hidden" name="option_amount7" value="10.00">
+
+<input type="hidden" name="option_select8" value="greenLife">
+<input type="hidden" name="option_amount8" value="10.00">
+
+<!-- $20 art -->
+<input type="hidden" name="option_select9" value="Fire">
+<input type="hidden" name="option_amount9" value="20.00">
+
+<input type="hidden" name="option_select10" value="Log1">
+<input type="hidden" name="option_amount10" value="20.00">
+
+<input type="hidden" name="option_select11" value="squir">
+<input type="hidden" name="option_amount11" value="20.00">
+
+<input type="hidden" name="option_select12" value="PurpleIce">
+<input type="hidden" name="option_amount12" value="20.00">
+
+<input type="hidden" name="option_select13" value="backR3">
+<input type="hidden" name="option_amount13" value="20.00">
+
+<input type="hidden" name="option_select14" value="lIn4">
+<input type="hidden" name="option_amount14" value="20.00">
+
+<input type="hidden" name="option_select15" value="lOut2">
+<input type="hidden" name="option_amount15" value="20.00">
+
+<input type="hidden" name="option_select16" value="rIn3">
+<input type="hidden" name="option_amount16" value="20.00">
+
+<input type="hidden" name="option_select17" value="rlc">
+<input type="hidden" name="option_amount17" value="20.00">
+
+<input type="hidden" name="option_select18" value="rOut4">
+<input type="hidden" name="option_amount18" value="20.00">
+
+<input type="hidden" name="option_select19" value="Stars">
+<input type="hidden" name="option_amount19" value="20.00">
+
+<input type="hidden" name="option_select20" value="YOURaiIShere">
+<input type="hidden" name="option_amount20" value="20.00">
+
+<input type="hidden" name="option_select21" value="dragon">
+<input type="hidden" name="option_amount21" value="20.00">
+
+<input type="hidden" name="option_select22" value="nebula">
+<input type="hidden" name="option_amount22" value="20.00">
+
+
+<!-- $40 art -->
+<input type="hidden" name="option_select23" value="eye">
+<input type="hidden" name="option_amount23" value="40.00">
+
+<input type="hidden" name="option_select24" value="comet">
+<input type="hidden" name="option_amount24" value="40.00">
+
+<input type="hidden" name="option_select25" value="Ferns">
+<input type="hidden" name="option_amount25" value="40.00">
+
+<input type="hidden" name="option_select26" value="leftPalm">
+<input type="hidden" name="option_amount26" value="40.00">
+
+<input type="hidden" name="option_select27" value="catHand">
+<input type="hidden" name="option_amount27" value="40.00">
+
+<input type="hidden" name="option_select28" value="MaggieFrog">
+<input type="hidden" name="option_amount28" value="40.00">
+
+<input type="hidden" name="option_select29" value="twoLegs">
+<input type="hidden" name="option_amount29" value="40.00">
+
+<input type="hidden" name="option_select30" value="spaceGases">
+<input type="hidden" name="option_amount30" value="40.00">
+
+<input type="hidden" name="option_select31" value="Flowers">
+<input type="hidden" name="option_amount31" value="40.00">
+
+
+<!-- $80 art -->
+<input type="hidden" name="option_select32" value="glowySwirl">
+<input type="hidden" name="option_amount32" value="80.00">
+
+<input type="hidden" name="option_select33" value="Alien">
+<input type="hidden" name="option_amount33" value="80.00">
+
+<input type="hidden" name="option_select34" value="Arm">
+<input type="hidden" name="option_amount34" value="80.00">
+
+<input type="hidden" name="option_select35" value="Bubbles">
+<input type="hidden" name="option_amount35" value="80.00">
+
+<input type="hidden" name="option_select36" value="theEcho7Net">
+<input type="hidden" name="option_amount36" value="80.00">
+
+<input type="hidden" name="option_select37" value="w5">
+<input type="hidden" name="option_amount37" value="80.00">
+
+<input type="hidden" name="option_select38" value="w8">
+<input type="hidden" name="option_amount38" value="80.00">
+
+<input type="hidden" name="option_select39" value="wb6">
+<input type="hidden" name="option_amount39" value="80.00">
+
+<input type="hidden" name="option_select40" value="fun">
+<input type="hidden" name="option_amount40" value="80.00">
+
+<input type="hidden" name="option_select41" value="IngridBody">
+<input type="hidden" name="option_amount41" value="80.00">
+
+<input type="hidden" name="option_select42" value="dragonMoutain">
+<input type="hidden" name="option_amount42" value="80.00">
+
+<input type="hidden" name="option_select43" value="RashidaBody">
+<input type="hidden" name="option_amount43" value="80.00">
+
+<input type="hidden" name="option_select44" value="bust">
+<input type="hidden" name="option_amount44" value="80.00">
+
+
+<!-- $140 art -->
+<input type="hidden" name="option_select45" value="BLACKbunny">
+<input type="hidden" name="option_amount45" value="140.00">
+
+<input type="hidden" name="option_select46" value="Rashida">
+<input type="hidden" name="option_amount46" value="140.00">
+
+<input type="hidden" name="option_select47" value="squ6">
+<input type="hidden" name="option_amount47" value="140.00">
+
+<input type="hidden" name="option_select48" value="Ingrid">
+<input type="hidden" name="option_amount48" value="140.00">
+
+<input type="hidden" name="option_select49" value="rose">
+<input type="hidden" name="option_amount49" value="140.00">
+
+
+<!-- $220 art -->
+<input type="hidden" name="option_select50" value="firstFrostForest">
+<input type="hidden" name="option_amount50" value="220.00">
+
+<input type="hidden" name="option_select51" value="abstract">
+<input type="hidden" name="option_amount51" value="220.00">
+
+<input type="hidden" name="option_select52" value="desert">
+<input type="hidden" name="option_amount52" value="220.00">
+
+<input type="hidden" name="option_select53" value="volcano">
+<input type="hidden" name="option_amount53" value="220.00">
+
+<input type="hidden" name="option_select54" value="frostNoRose">
+<input type="hidden" name="option_amount54" value="220.00">
+
+
+<!-- Add to Cart -->
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+
+</form>
+
+
+<!-- This is the View Cart -->
+
+<!-- sandbox viewcart
+<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="6S9JN4DKMU5SU">
+<input type="hidden" name="display" value="1">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+-->
+
+
+<!-- Production button viewcart -->
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="DS7NH8WWHBEDE">
+<input type="hidden" name="display" value="1">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+
+	<!-- My loading indicator filled in by ipadFade4.js  -->
+	<span id='loading'></span>
+	<span id='percentLoaded' style='color:blue';></span>
+	<br>
+
+
+<button style = 'margin-left:30px;' onclick="startFade()" >Get Next Painting</button>
+<br>
+
+
+<div style="position: relative;">
+<canvas id="canvas" style="width:80%; height:80%;  border-style: solid; border-color:transparent; border-width: 1px;" ></canvas>
+
+</div>
+
+<script src="/static/myDream/js/ipadFade4.js"></script>
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+<!-- These buttons lose their size when inside flexbox, now all this slide show stuff is outside flexbox. -->
+
+<!--
+	<div>
+	<img id='rewindBut' title = 'fast rewind (click multiple times)' 'height=3% width=5%' src='/Images/slideShowBut/orangeFR.ico' onmousedown="ssControl(this);" />
+	<img id='stopBut' title = 'stop/start' 'height=3% width=5%' src='/Images/slideShowBut/orangeStop.ico' onmousedown="ssControl(this);" />
+	<img id='forwardBut' title = 'fast forward (click multiple times)' 'height=3% width=5%' src='/Images/slideShowBut/orangeFF.ico' onmousedown="ssControl(this);" />
+	</div>
+-->
+
+
+
+	<!--
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+	</script>
+
+	<button id="fade">Fade to next Image</button><br>
+	-->
+
+<!--
+<div style="position: relative;">
+		<canvas id="canvas2" width="100%" height="100%" style="position:absolute; left:0; top:0; z-index:1;"></canvas>
+</div>
+-->
+
+	<!--
+
+	<script src="/js_L/ipadFad.js"></script>
+	<script src="/js_L/superFade.js"></script>
+	<script src="/js_L/superFade3.js"></script>
+	<script src="/js_L/shiftWorks12.js"></script>
+	-->
+
+
+		<footer>
+
+<!-- More sandbox testing, Yea it WORKS!
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NCM37YKG9U3AW">
+<table>
+<tr><td><input type="hidden" name="on0" value="davesDropDownName">davesDropDownName</td></tr><tr><td><select name="os0">
+	<option value="gimpy1">gimpy1 $10.00 USD</option>
+	<option value="looy2">looy2 $10.00 USD</option>
+	<option value="bird3">bird3 $10.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+-->
+
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

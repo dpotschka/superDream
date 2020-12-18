@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+{% load static %}
+
+
+    <head>
+
+		<title>Your Web Page</title>
+
+
+
+		<link rel="stylesheet" type="text/css" href="{% static 'myDream/DreamStyleSheet.css' %}">
+
+<meta name="description" content="Now is the time!">
+<meta name="keywords" content="thd, THD, theHyperDream, thehyperdream, the hyperdream, the hyper dream,
+the dream, dream, self help, help me, dream boy, dream girl,
+motivate, motivate anyone, love, health, wealth, happiness,
+subliminal questions, motivation questions, motivation, ideas, great ideas, guru,
+hope, get off drugs, get my teenager off drugs, subliminal intervention, subliminal, intervention, quit drugs, help others, help all,
+help ">
+<meta name="author" content="David H Potschka">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+
+
+
+
+		</style>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1262471543795678'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1262471543795678&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+
+    </head>
+
+	<body>
+
+		<header>
+<!--
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+<a href="http://www.thehyperdream.com/"><img id="logoNet" height="15%" width="15%" src="/static/myDream/webImages/buttons/logoNet/hyperDreamLogo1.jpg" onmouseover="getid(this);" /></a>
+-->
+
+<a href="http://www.thehyperdream.com/"><img id="logoPic" style="margin-left:20px; margin-top:20px" height="11.11%" width="11.11%" src="/static/myDream/theArt/thd3f.png" /></a>
+
+<br>
+In production Not yet available,  I will email you, most of the code is done though.
+
+		<br>
+
+		<header>
+
+			<p class= 'centerWider'>
+			Create your own web page in less than 5 seconds (sign up and log on to do this).<span style="word-spacing:0.60em"> </span>
+			Then win a prize if you get the most votes for the best page.<span style="word-spacing:0.60em"> </span>
+			Just think of a name for your page and type it into the address bar above.<span style="word-spacing:0.60em"> </span>
+				Example:<span style="word-spacing:0.60em"> </span>
+				https://www.theHyperDream.com/yourPageNameGoesHere.<span style="word-spacing:0.60em"> </span>
+				Don't forget the '/' slash before your page name and you will need all that hyper dream stuff as well.<span style="word-spacing:0.60em"> </span>
+
+				Some extremely unique page names won't work, for example www.theHyperDream.com// will time warp you back here.<span style="word-spacing:0.60em"> </span>
+				A space will give you an error.<span style="word-spacing:0.60em"> </span>
+				There is no space.<span style="word-spacing:0.60em"> </span>
+				<br>
+				You can use letters, numbers, dashes and underscores to make your page name.<span style="word-spacing:0.60em"> </span>
+		        <br><br>
+				If your page name is not available you will see some one else's stuff, if they didn't leave it blank.<span style="word-spacing:0.60em"> </span>
+				Regardless, you can edit that page as well; if they didn't lock their page.<span style="word-spacing:0.60em"> </span>
+				You can also drop some links in here.<span style="word-spacing:0.60em"> </span>Here is the html code
+				that is allowed on this site:<span style="word-spacing:0.60em"> </span><br>
+				a, b, br, div, h1, h2, h3, img, i, ol, p, pre, span, style, table, tr, td, ul
+				<br><br>
+				You can pass messages with your friends by focusing on the same page of your choice.
+				<br>
+				And,
+				<br>
+				You can also upload/download videos (if you log in) and you can download YouTube videos, scroll down and check it out!
+
+		    </p>
+
+		   <span style="color:blue;margin-left:120px;"> Stay Strong,</span>
+		   <br>
+		   <span style="color:blue;margin-left:120px;"> Dave</span>
+		   <br>
+		   <span style="color:blue;margin-left:120px;">theHyperDream.com </span>
+
+		   <br><br>
+		   <span style="color:blue;margin-left:120px;">{{contactDave | safe}}</span>
+		   <br><br>
+
+			<hr>
+
+
+
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+			</nav>
+
+
+
+			<article>
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+<img src="{% static '/myDream/webImages/volcanoN.jpg' %}">
+
+		</footer>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>

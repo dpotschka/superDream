@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- This is my web page template using flex for sizing. The following must be under the html tag.   -->
+<!-- c:/Daves_Python_Progrmas/wiki/whatdoesthefroggot/templates_local/flexPageTemplate.html      -->
+
+
+<!-- { extends 'base.html' %} -->
+
+<!-- This loader must  be first.  { extends 'base_site.html' %}
+that gets my django format for cool templates like my contact form here.
+It gets base_site from superDream/templates    YEA!
+'extends' is like inheriting from another class.
+-->
+
+{% load static %}
+
+
+    <head>
+
+<title>Dream theHyperDream</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <meta name="description" content="Stock Market Solution and builder of your website!">
+    <meta name="keywords" content="the hyper Dream, theHyperDream.com, stock market solution,
+    Stock Market Solution, builder of your website, dream, motivate, love, faith, hope, health, wealth,
+    happiness, ideas, great ideas">
+
+    <meta name="author" content="David H Potschka">
+
+    <meta property="og:title" content="Dream theHyperDream"/>
+    <meta property="og:description" content="Stock Market Solution and builder of your website!" />
+    <meta property="og:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta property="og:url" content="https://www.thehyperdream.com/myDream/contact/" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="243074516150509" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Dream theHyperDream" />
+    <meta name="twitter:description" content="Stock Market Solution and builder of your website!" />
+    <meta name="twitter:image" content="https://www.thehyperdream.com/static/myDream/webImages/SlideShow/firstFrostForestSmallN.jpg" />
+    <meta name="twitter:url" content="https://www.thehyperdream.com/myDream/contact/" />
+
+    <link rel="shortcut icon" href="https://www.pythonanywhere.com/user/timetable/files/home/timetable/superDream/myDream/static/myDream/webImages/LogoF240x240.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'myDream/dreamStyleSheet.css' %}">
+
+
+		<style>
+
+			#main { display: flex; }
+			#main > article { order: 2; min-width: 12em; flex:1; }   /* 12 em is 192px plus nav and aside equals 592px */
+			#main > nav     { order: 1; width: 200px; }              /* that is why @media has a max width of 600px */
+			#main > aside   { order: 3; width: 200px; }
+
+			/*
+
+			As an added bonus, the columns will all be equal-height by default, and the main content will
+			be as wide as necessary to fill the screen. Additionally, this can then be combined with media
+			queries to switch to an all-vertical layout on narrow screens:
+
+			*/
+
+			@media all and (max-width: 600px) {
+			/* Too narrow to support three columns */
+			#main { flex-flow: column; }
+			#main > article, #main > nav, #main > aside {
+			/* Return them to document order */
+			order: 0; width: auto;
+			  }
+			}
+
+
+            /*
+            body {
+                    background-image: url("/static/myDream/webImages/blueGrey.jpg");
+                     background-repeat: no-repeat;
+                      background-size: 100% 100%;
+                 }
+            */
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-width:99%;
+}
+
+
+h1 {
+  text-shadow: 0px 0px 6px #FFffff;
+}
+
+
+form {
+  text-shadow: 1px 1px #FFFFFF;
+  font-size:20px;
+  /*background-color: #f18973;*/
+}
+
+
+
+
+		</style>
+
+
+
+<!-- smartLook.com they record how long a user stays on each page etc.-->
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '3be135f40818074bacbc7bf5a368b143714d576c');
+</script>
+
+
+    </head>
+
+	<body>
+
+
+	    <video autoplay muted loop id="myVideo" poster="/static/myDream/builderImages/fire-7.png">
+  <source src="/static/myDream/builderImages/fireNew.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+
+<script type="text/javascript" src="/static/myDream/js/butImages.js"></script>
+		<header>
+
+<!--
+<a style="position:relative; margin-left:2%" href="https://thehyperdream.webflow.io/"><img id="builder" height="25px" width="141px" src="/static/myDream/webImages/buttons/builder1.png" onmouseover="getid(this);" /></a>
+-->
+
+<a style="position:relative; margin-left:2%" href="https://www.thehyperdream.com"><img id="thd" height="25px" width="141px" src="/static/myDream/webImages/buttons/thd1.png" onmouseover="getid(this);" /></a>
+
+		</header>
+
+
+		<div id='main'>
+
+
+			<nav>
+
+
+			</nav>
+
+
+
+			<article>
+
+
+
+
+
+{% block content %}
+<h1 style="position:relative">Contact Dave, creator of theHyperDream.com ;-)</h1>
+<form style="position:relative" role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit' value='Thank You'>Thank You</button>
+</form>
+{% endblock %}
+
+
+			</article>
+
+
+
+			<aside>
+
+
+			</aside>
+
+
+		</div>
+
+
+		<footer>
+<!--
+<img src="{% static '/myDream/webImages/dragonDecClipBN.jpg' %}">
+-->
+
+		</footer>
+
+
+
+
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+
+
+
+    </body>
+
+
+
+</html>
